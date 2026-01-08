@@ -12,9 +12,9 @@ const webinarResults = {
     1: {
         title: "Банковский сектор (Открытие сезона отчетов)",
         date: "14 января 2026",
-        tickers: ["NYSE:BAC, NYSE:WFC, NYSE:C"],
+        tickers: ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
         videoId: "YOUR_VIDEO_ID_1",
-        videoUrl: "https://drive.google.com/file/d/1PyWKMTO5cj_evzUteR1ZlQ1tnJjDKQXb/view?usp=sharing",
+        videoUrl: "https://youtu.be/dZBX54MA7O0?si=PCruG7iKY4VdA-6_",
         screenshot: "", // Add screenshot URL here
         stats: {
             result: "+18.5%",
