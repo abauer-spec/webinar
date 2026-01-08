@@ -10,19 +10,19 @@ function registerWebinar(id) {
 // Modal data for past webinars
 const webinarResults = {
     1: {
-        title: "Tesla Q4 2025 - Разбор отчета",
-        date: "5 января 2026",
-        tickers: ["NASDAQ:TSLA"],
+        title: "Банковский сектор (Открытие сезона отчетов)",
+        date: "14 января 2026",
+        // tickers: ["NASDAQ:TSLA"],
         videoId: "YOUR_VIDEO_ID_1",
-        videoUrl: "https://drive.google.com/file/d/YOUR_FILE_ID/preview",
+        videoUrl: "https://drive.google.com/file/d/1PyWKMTO5cj_evzUteR1ZlQ1tnJjDKQXb/view?usp=sharing",
         screenshot: "", // Add screenshot URL here
         stats: {
-            result: "+8.5%",
+            result: "+18.5%",
             trades: 3,
-            duration: "2.5 ч",
-            participants: 156
+            duration: "48 мин.",
+            participants: 456
         },
-        description: "На вебинаре мы детально разобрали квартальный отчет Tesla, проанализировали ключевые метрики и провели успешную торговую сессию. Основные позиции были открыты после публикации данных о выручке, которая превысила ожидания аналитиков."
+        description: "Анализируем отчетность крупнейших коммерческих банков США. Обсуждаем влияние процентных ставок на чистую прибыль и ищем точки входа."
     },
     2: {
         title: "Фармацевтика: итоги года",
