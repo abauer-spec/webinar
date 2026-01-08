@@ -10,49 +10,154 @@ function registerWebinar(id) {
 // Modal data for past webinars
 const webinarResults = {
     1: {
-        title: "Банковский сектор (Открытие сезона отчетов)",
-        date: "14 января 2026",
-        tickers: ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
-        videoId: "YOUR_VIDEO_ID_1",
-        videoUrl: "https://drive.google.com/file/d/1q6vOX7c61-uFO2BJfyudgDJ8S2XmDt-Q/view?usp=sharing",
-        screenshot: "https://drive.google.com/file/d/1yLjEESteTucz1vlWWu-IjC7K3vQ0dlDF/view?usp=sharing", // Add screenshot URL here
-        stats: {
-            result: "+18.5%",
-            trades: 3,
-            duration: "48 мин.",
-            participants: 456
-        },
-        description: "Анализируем отчетность крупнейших коммерческих банков США. Обсуждаем влияние процентных ставок на чистую прибыль и ищем точки входа."
+      "title": "Старт сезона отчётов: Главный банк США",
+      "date": "13 января 2026",
+      "tickers": ["NYSE:JPM"],
+      "videoId": "JPM_WEBINAR_01",
+      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
+      "stats": {
+        "result": "+12.3%",
+        "trades": 2,
+        "duration": "52 мин.",
+        "participants": 380
+      },
+      "description": "Анализируем результаты JPMorgan Chase. Обсуждаем прогнозы по кредитованию и ожидания главы банка Джейми Даймона на 2026 год."
     },
     2: {
-        title: "Фармацевтика: итоги года",
-        date: "28 декабря 2025",
-        tickers: ["NYSE:PFE", "NYSE:JNJ", "NASDAQ:MRNA"],
-        videoId: "YOUR_VIDEO_ID_2",
-        videoUrl: "https://drive.google.com/file/d/YOUR_FILE_ID/preview",
-        screenshot: "",
-        stats: {
-            result: "+12.3%",
-            trades: 5,
-            duration: "3 ч",
-            participants: 203
-        },
-        description: "Комплексный анализ годовых отчетов крупнейших фармацевтических компаний. Особое внимание уделили разделу R&D и pipeline новых препаратов. Торговая стратегия включала как краткосрочные, так и среднесрочные позиции."
+      "title": "Банковский сектор (Открытие сезона отчетов)",
+      "date": "14 января 2026",
+      "tickers": ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
+      "videoId": "BANKS_WEBINAR_02",
+      "videoUrl": "https://drive.google.com/file/d/1q6vOX7c61-uFO2BJfyudgDJ8S2XmDt-Q/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/1yLjEESteTucz1vlWWu-IjC7K3vQ0dlDF/view?usp=sharing",
+      "stats": {
+        "result": "+18.5%",
+        "trades": 3,
+        "duration": "48 мин.",
+        "participants": 456
+      },
+      "description": "Анализируем отчетность крупнейших коммерческих банков США. Обсуждаем влияние процентных ставок на чистую прибыль и ищем точки входа."
     },
     3: {
-        title: "Semiconductor отчеты Q3",
-        date: "20 декабря 2025",
-        tickers: ["NASDAQ:NVDA", "NASDAQ:AMD", "NASDAQ:INTC"],
-        videoId: "YOUR_VIDEO_ID_3",
-        videoUrl: "https://drive.google.com/file/d/YOUR_FILE_ID/preview",
-        screenshot: "",
-        stats: {
-            result: "+15.7%",
-            trades: 4,
-            duration: "2.8 ч",
-            participants: 187
-        },
-        description: "Углубленный разбор отчетов производителей полупроводников. Анализировали динамику спроса в сегменте AI-чипов и datacenter. Получили отличные результаты на волатильности после публикации отчетов NVIDIA и AMD."
+      "title": "Инвестиционные гиганты: Аналитика и M&A",
+      "date": "15 января 2026",
+      "tickers": ["NYSE:GS", "NYSE:MS"],
+      "videoId": "INVEST_WEBINAR_03",
+      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
+      "stats": {
+        "result": "+9.8%",
+        "trades": 4,
+        "duration": "60 мин.",
+        "participants": 312
+      },
+      "description": "Разбираем доходы Goldman Sachs и Morgan Stanley. Оцениваем активность на рынке слияний и поглощений и доходы от трейдинга."
+    },
+    4: {
+      "title": "Технологии и медицина: Потребительский спрос",
+      "date": "21 января 2026",
+      "tickers": ["NASDAQ:NFLX", "NASDAQ:IBKR", "NYSE:JNJ"],
+      "videoId": "TECH_MED_04",
+      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
+      "stats": {
+        "result": "+21.2%",
+        "trades": 5,
+        "duration": "55 мин.",
+        "participants": 520
+      },
+      "description": "Оцениваем рост числа подписчиков Netflix и финансовую устойчивость Johnson & Johnson. Разбираем отчет IBKR."
+    },
+    5: {
+      "title": "Мировые транзакции и потребительские товары",
+      "date": "22 января 2026",
+      "tickers": ["NYSE:V", "NYSE:PG", "NASDAQ:XRX"],
+      "videoId": "VISA_PG_05",
+      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
+      "stats": {
+        "result": "+14.1%",
+        "trades": 3,
+        "duration": "42 мин.",
+        "participants": 290
+      },
+      "description": "Анализируем объем платежей через Visa как индикатор здоровья мировой экономики и устойчивость прибыли Procter & Gamble."
+    },
+    6: {
+      "title": "Чипы и логистика: Фундамент индустрии",
+      "date": "23 января 2026",
+      "tickers": ["NASDAQ:INTC", "NASDAQ:CSX"],
+      "videoId": "CHIPS_WEBINAR_06",
+      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
+      "stats": {
+        "result": "-2.5%",
+        "trades": 2,
+        "duration": "38 мин.",
+        "participants": 340
+      },
+      "description": "Обсуждаем технологическую гонку Intel и состояние логистических цепочек США через отчет железнодорожного гиганта CSX."
+    },
+    7: {
+      "title": "Авиаперевозки: Динамика лоукостеров",
+      "date": "26 января 2026",
+      "tickers": ["NASDAQ:RYAAY"],
+      "videoId": "RYANAIR_WEBINAR_07",
+      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
+      "stats": {
+        "result": "+7.4%",
+        "trades": 1,
+        "duration": "35 мин.",
+        "participants": 210
+      },
+      "description": "Разбираем финансовые показатели Ryanair. Обсуждаем стоимость топлива и готовность европейцев тратить деньги на полеты."
+    },
+    8: {
+      "title": "Промышленность и Авто: Вызовы производства",
+      "date": "27 января 2026",
+      "tickers": ["NYSE:BA", "NYSE:GM"],
+      "videoId": "BOEING_GM_08",
+      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
+      "stats": {
+        "result": "+11.0%",
+        "trades": 3,
+        "duration": "50 мин.",
+        "participants": 405
+      },
+      "description": "Анализируем портфель заказов Boeing и темпы перехода General Motors на электромобили в новом квартале."
+    },
+    9: {
+      "title": "День мега-капитализации: ИИ и Технологии",
+      "date": "29 января 2026",
+      "tickers": ["NASDAQ:MSFT", "NASDAQ:TSLA", "NYSE:IBM", "NYSE:T", "NASDAQ:AMZN", "NYSE:CAT", "NASDAQ:HON", "NYSE:LMT"],
+      "videoId": "BIGTECH_WEBINAR_09",
+      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
+      "stats": {
+        "result": "+34.2%",
+        "trades": 8,
+        "duration": "120 мин.",
+        "participants": 1250
+      },
+      "description": "Самый важный день сезона. Обсуждаем успехи Microsoft в области ИИ, маржинальность Tesla и доходы Amazon Cloud."
+    },
+    10: {
+      "title": "Итоги квартала: Премиальный сегмент",
+      "date": "30 января 2026",
+      "tickers": ["NASDAQ:AAPL", "NYSE:AXP"],
+      "videoId": "APPLE_WEBINAR_10",
+      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
+      "stats": {
+        "result": "+15.6%",
+        "trades": 4,
+        "duration": "58 мин.",
+        "participants": 890
+      },
+      "description": "Завершаем неделю анализом продаж iPhone и данных по кредитным расходам владельцев карт American Express."
     }
 };
 
