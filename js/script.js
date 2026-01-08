@@ -98,7 +98,7 @@ function showResults(id) {
     // Build screenshot HTML
     const screenshotHTML = data.screenshot 
         ? `<img src="${data.screenshot}" alt="Результаты торговли">` 
-        : '<div style="padding: 60px; text-align: center;">Скриншот результатов<br>(Placeholder)</div>';
+        : '<div style="padding: 60px; text-align: center;">Скриншот результатов';
     
     // Build modal content
     modalBody.innerHTML = `
@@ -112,12 +112,12 @@ function showResults(id) {
         </div>
         
         <div class="modal-section">
-            <h3>📊 Статистика вебинара</h3>
+            <h3>Статистика вебинара</h3>
             ${statsHTML}
         </div>
         
         <div class="modal-section">
-            <h3>🎥 Видео-запись</h3>
+            <h3>Видео-запись</h3>
             <div class="video-container">
                 <iframe src="${data.videoUrl}" allow="autoplay" allowfullscreen></iframe>
             </div>
@@ -131,14 +131,14 @@ function showResults(id) {
         </div>
         
         <div class="modal-section">
-            <h3>📸 Результаты торговли</h3>
+            <h3>Результаты торговли</h3>
             <div class="screenshot-placeholder">
                 ${screenshotHTML}
             </div>
         </div>
         
         <div class="modal-section">
-            <h3>📝 Описание</h3>
+            <h3>Описание</h3>
             <p style="color: var(--text-secondary); line-height: 1.8;">${data.description}</p>
         </div>
     `;
