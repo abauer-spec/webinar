@@ -15,7 +15,7 @@ const webinarResults = {
         tickers: ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
         videoId: "YOUR_VIDEO_ID_1",
         videoUrl: "https://drive.google.com/file/d/1q6vOX7c61-uFO2BJfyudgDJ8S2XmDt-Q/view?usp=sharing",
-        screenshot: "", // Add screenshot URL here
+        screenshot: "https://drive.google.com/file/d/1yLjEESteTucz1vlWWu-IjC7K3vQ0dlDF/view?usp=sharing", // Add screenshot URL here
         stats: {
             result: "+18.5%",
             trades: 3,
