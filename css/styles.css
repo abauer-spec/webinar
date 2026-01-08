@@ -424,9 +424,9 @@ body {
 }
 
 .modal-section h3 {
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-bottom: 16px;
-    color: var(--accent-blue);
+    color: #ffffff;
 }
 
 .video-container {
@@ -452,9 +452,9 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: var(--accent-blue);
+    color: #ffffff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1rem;
     padding: 8px 16px;
     border: 1px solid var(--accent-blue);
     border-radius: 4px;
