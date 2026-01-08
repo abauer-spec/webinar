@@ -12,7 +12,7 @@ const webinarResults = {
     1: {
         title: "Банковский сектор (Открытие сезона отчетов)",
         date: "14 января 2026",
-        // tickers: ["NASDAQ:TSLA"],
+        tickers: ["NYSE:BAC, NYSE:WFC, NYSE:C"],
         videoId: "YOUR_VIDEO_ID_1",
         videoUrl: "https://drive.google.com/file/d/1PyWKMTO5cj_evzUteR1ZlQ1tnJjDKQXb/view?usp=sharing",
         screenshot: "", // Add screenshot URL here
