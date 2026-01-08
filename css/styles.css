@@ -150,15 +150,15 @@ body {
 }
 
 .btn-success {
-    background-color: var(--accent-green);
+    background-color: #de7dba;
     color: white;
     width: 100%;
 }
 
 .btn-success:hover {
-    background-color: #00A844;
+    background-color: #fb3db5;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 200, 83, 0.4);
+    box-shadow: 0 4px 12px rgb(184 0 200 / 40%);
 }
 
 .btn-outline {
@@ -199,8 +199,8 @@ body {
 
 /* Webinar Card */
 .webinar-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background-color: #070b0d;
+    border: 1px solid #6c435c;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s;
@@ -225,7 +225,7 @@ body {
 }
 
 .card-badge {
-    background-color: var(--accent-green);
+    background-color: #6c435c;
     color: white;
     padding: 4px 12px;
     border-radius: 4px;
