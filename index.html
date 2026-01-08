@@ -25,6 +25,25 @@
         <div class="container">
             <h2 class="section-title">Предстоящие вебинары</h2>
             <div class="webinars-grid">
+
+                <!-- Webinar Card 0 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">13 января 2026, 16:00 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Банковский сектор (Открытие сезона отчетов)</h3>
+                        <div class="card-tickers">
+                            <!-- <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script> -->
+                            <tv-ticker-tag symbol="NYSE:JPM"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Анализируем отчетность крупнейших коммерческих банков США. Обсуждаем влияние процентных ставок на чистую прибыль и ищем точки входа.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(1)">Зарегистрироваться</button>
+                    </div>
+                </div>
                 
                 <!-- Webinar Card 1 -->
                 <div class="webinar-card">
@@ -35,7 +54,6 @@
                     <div class="card-body">
                         <h3 class="card-title">Банковский сектор (Открытие сезона отчетов)</h3>
                         <div class="card-tickers">
-                            <!-- <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script> -->
                             <tv-ticker-tag symbol="NYSE:BAC"></tv-ticker-tag>
                             <tv-ticker-tag symbol="NYSE:WFC"></tv-ticker-tag>
                             <tv-ticker-tag symbol="NYSE:C"></tv-ticker-tag>
@@ -43,7 +61,7 @@
                         <p class="card-description">Анализируем отчетность крупнейших коммерческих банков США. Обсуждаем влияние процентных ставок на чистую прибыль и ищем точки входа.</p>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-success" onclick="registerWebinar(1)">Зарегистрироваться</button>
+                        <button class="btn btn-success" onclick="registerWebinar(1)" disabled>Зарегистрироваться</button>
                     </div>
                 </div>
 
@@ -56,12 +74,10 @@
                     <div class="card-body">
                         <h3 class="card-title">Инвестиционные гиганты (Wall Street Leaders)</h3>
                         <div class="card-tickers">
-                            <!-- <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script> -->
                             <tv-ticker-tag symbol="NYSE:GS"></tv-ticker-tag>
                             <tv-ticker-tag symbol="NYSE:MS"></tv-ticker-tag>
-                            <tv-ticker-tag symbol="NYSE:BLK"></tv-ticker-tag>
                         </div>
-                        <p class="card-description">Разбор финансовых результатов топовых инвестбанков. Оцениваем объемы сделок M&A и притоки капитала в крупнейший фонд мира BlackRock.</p>
+                        <p class="card-description">Разбор финансовых результатов топовых инвестбанков. Оцениваем объемы сделок M&A.</p>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-success" onclick="registerWebinar(2)" disabled>Зарегистрироваться</button>
@@ -77,9 +93,9 @@
                     <div class="card-body">
                         <h3 class="card-title">Сектор развлечений и брокерских услуг</h3>
                         <div class="card-tickers">
-                            <!-- <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script> -->
                             <tv-ticker-tag symbol="NASDAQ:NFLX"></tv-ticker-tag>
                             <tv-ticker-tag symbol="NASDAQ:IBKR"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:JNJ"></tv-ticker-tag>
                         </div>
                         <p class="card-description">Торговля на подписках стримингового лидера и анализ активности частных трейдеров через отчетность Interactive Brokers.</p>
                     </div>
@@ -89,27 +105,124 @@
                 </div>
 
                 <!-- Webinar Card 4 -->
-                <!-- <div class="webinar-card">
+                <div class="webinar-card">
                     <div class="card-header">
                         <span class="card-badge">Скоро</span>
-                        <span class="card-date">25 января 2026, 19:00 МСК</span>
+                        <span class="card-date">22 января 2026, 16:00 МСК</span>
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">Retail & E-commerce отчеты</h3>
+                        <h3 class="card-title">Сектор развлечений и брокерских услуг</h3>
                         <div class="card-tickers">
-                            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script>
-                            <tv-ticker-tag symbol="NASDAQ:AMZN"></tv-ticker-tag>
-                            <tv-ticker-tag symbol="NYSE:WMT"></tv-ticker-tag>
-                            <tv-ticker-tag symbol="NYSE:TGT"></tv-ticker-tag>
-                            <tv-ticker-tag symbol="NYSE:HD"></tv-ticker-tag>
-                            <tv-ticker-tag symbol="NYSE:COST"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:V"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:PG"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:XRX"></tv-ticker-tag>
                         </div>
-                        <p class="card-description">Анализ розничных продаж и e-commerce метрик в квартальных отчетах</p>
+                        <p class="card-description">Торговля на подписках стримингового лидера и анализ активности частных трейдеров через отчетность Interactive Brokers.</p>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-success" onclick="registerWebinar(4)" disabled>Зарегистрироваться</button>
+                        <button class="btn btn-success" onclick="registerWebinar(3)" disabled>Зарегистрироваться</button>
                     </div>
-                </div> -->
+                </div>
+
+                <!-- Webinar Card 5 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">23 января 2026, 16:00 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Сектор развлечений и брокерских услуг</h3>
+                        <div class="card-tickers">
+                            <tv-ticker-tag symbol="NASDAQ:INTC"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:CSX"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Торговля на подписках стримингового лидера и анализ активности частных трейдеров через отчетность Interactive Brokers.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(3)" disabled>Зарегистрироваться</button>
+                    </div>
+                </div>
+
+                <!-- Webinar Card 6 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">26 января 2026, 16:00 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Сектор развлечений и брокерских услуг</h3>
+                        <div class="card-tickers">
+                            <tv-ticker-tag symbol="NASDAQ:RYAAY"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Торговля на подписках стримингового лидера и анализ активности частных трейдеров через отчетность Interactive Brokers.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(3)" disabled>Зарегистрироваться</button>
+                    </div>
+                </div>
+
+                <!-- Webinar Card 7 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">27 января 2026, 16:00 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Сектор развлечений и брокерских услуг</h3>
+                        <div class="card-tickers">
+                            <tv-ticker-tag symbol="NYSE:BA"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:GM"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Торговля на подписках стримингового лидера и анализ активности частных трейдеров через отчетность Interactive Brokers.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(3)" disabled>Зарегистрироваться</button>
+                    </div>
+                </div>
+
+                <!-- Webinar Card 8 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">29 января 2026, 16:00 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Сектор развлечений и брокерских услуг</h3>
+                        <div class="card-tickers">
+                            <tv-ticker-tag symbol="NASDAQ:MSFT"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:TSLA"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:IBM"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:T"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:AMZN"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:CAT"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:HON"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:LMT"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Торговля на подписках стримингового лидера и анализ активности частных трейдеров через отчетность Interactive Brokers.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(3)" disabled>Зарегистрироваться</button>
+                    </div>
+                </div>
+
+                <!-- Webinar Card 9 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">30 января 2026, 16:00 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Сектор развлечений и брокерских услуг</h3>
+                        <div class="card-tickers">
+                            <tv-ticker-tag symbol="NASDAQ:AAPL"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:AXP"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Торговля на подписках стримингового лидера и анализ активности частных трейдеров через отчетность Interactive Brokers.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(3)" disabled>Зарегистрироваться</button>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -120,9 +233,9 @@
         <div class="container">
             <h2 class="section-title">Прошедшие вебинары</h2>
             <div class="webinars-grid">
-                
+                <p>Завершенных вебинаров еще нет</p>
                 <!-- Past Webinar 1 -->
-                <div class="webinar-card past">
+                <!-- <div class="webinar-card past">
                     <div class="card-header">
                         <span class="card-badge past-badge">Завершен</span>
                         <span class="card-date">14 января 2026</span>
@@ -130,7 +243,6 @@
                     <div class="card-body">
                         <h3 class="card-title">Банковский сектор (Открытие сезона отчетов)</h3>
                         <div class="card-tickers">
-                            <!-- <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script> -->
                             <tv-ticker-tag symbol="NYSE:BAC"></tv-ticker-tag>
                             <tv-ticker-tag symbol="NYSE:WFC"></tv-ticker-tag>
                             <tv-ticker-tag symbol="NYSE:C"></tv-ticker-tag>
@@ -140,7 +252,7 @@
                     <div class="card-footer">
                         <button class="btn btn-outline" onclick="showResults(1)">Посмотреть итоги</button>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Past Webinar 2 -->
                 <!-- <div class="webinar-card past">
