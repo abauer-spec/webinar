@@ -21,7 +21,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
-    background-color: var(--bg-primary);
+    /* background-color: var(--bg-primary); */
+    background-color: #010101;
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -94,11 +95,7 @@ body {
 
 /* Hero Section */
 .hero {
-    /* padding: 100px 0;
-    text-align: center;
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-    border-bottom: 1px solid var(--border-color); */
-    padding: 150px 0; /* Увеличил отступы для большего объема */
+    padding: 150px 0;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
                 url('../img/pg.jpg');
@@ -106,7 +103,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .hero-title {
