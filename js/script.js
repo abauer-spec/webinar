@@ -14,7 +14,7 @@ const webinarResults = {
         date: "14 января 2026",
         tickers: ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
         videoId: "YOUR_VIDEO_ID_1",
-        videoUrl: "https://youtu.be/dZBX54MA7O0?si=PCruG7iKY4VdA-6_",
+        videoUrl: "https://drive.google.com/file/d/1q6vOX7c61-uFO2BJfyudgDJ8S2XmDt-Q/view?usp=sharing",
         screenshot: "", // Add screenshot URL here
         stats: {
             result: "+18.5%",
