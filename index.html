@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торговля на отчетах - Трейдинговые вебинары</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M8 24L16 8L24 24H8Z" fill="#2962FF"/>
+                    <path d="M12 20L16 12L20 20H12Z" fill="#00C853"/>
+                </svg>
+                <span>Торговля на отчетах</span>
+            </div>
+            <nav class="nav">
+                <a href="#upcoming" class="nav-link">Предстоящие</a>
+                <a href="#past" class="nav-link">Прошедшие</a>
+                <a href="#about" class="nav-link">О проекте</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Профессиональная торговля<br>на корпоративных отчетах</h1>
+            <p class="hero-subtitle">Присоединяйтесь к нашим вебинарам и узнайте, как зарабатывать на публикации финансовых отчетов</p>
+            <a href="#upcoming" class="btn btn-primary">Зарегистрироваться на вебинар</a>
+        </div>
+    </section>
+
+    <!-- Upcoming Webinars Section -->
+    <section id="upcoming" class="section">
+        <div class="container">
+            <h2 class="section-title">Предстоящие вебинары</h2>
+            <div class="webinars-grid">
+                
+                <!-- Webinar Card 1 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">15 января 2026, 19:00 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Торговля на отчетах Tech Giants</h3>
+                        <div class="card-tickers">
+                            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script>
+                            <tv-ticker-tag symbol="NASDAQ:AAPL"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:MSFT"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:GOOGL"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Анализ квартальных отчетов крупнейших технологических компаний и стратегии торговли</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(1)">Зарегистрироваться</button>
+                    </div>
+                </div>
+
+                <!-- Webinar Card 2 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">18 января 2026, 18:30 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Банковский сектор: отчеты Q4</h3>
+                        <div class="card-tickers">
+                            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script>
+                            <tv-ticker-tag symbol="NYSE:JPM"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:BAC"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:GS"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:MS"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Разбор отчетов крупнейших банков США и торговые возможности</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(2)">Зарегистрироваться</button>
+                    </div>
+                </div>
+
+                <!-- Webinar Card 3 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">22 января 2026, 20:00 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Энергетический сектор</h3>
+                        <div class="card-tickers">
+                            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script>
+                            <tv-ticker-tag symbol="NYSE:XOM"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:CVX"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Торговля на отчетах нефтегазовых компаний в условиях меняющегося рынка</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(3)">Зарегистрироваться</button>
+                    </div>
+                </div>
+
+                <!-- Webinar Card 4 -->
+                <div class="webinar-card">
+                    <div class="card-header">
+                        <span class="card-badge">Скоро</span>
+                        <span class="card-date">25 января 2026, 19:00 МСК</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Retail & E-commerce отчеты</h3>
+                        <div class="card-tickers">
+                            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script>
+                            <tv-ticker-tag symbol="NASDAQ:AMZN"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:WMT"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:TGT"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:HD"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:COST"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Анализ розничных продаж и e-commerce метрик в квартальных отчетах</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success" onclick="registerWebinar(4)">Зарегистрироваться</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Webinars Section -->
+    <section id="past" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Прошедшие вебинары</h2>
+            <div class="webinars-grid">
+                
+                <!-- Past Webinar 1 -->
+                <div class="webinar-card past">
+                    <div class="card-header">
+                        <span class="card-badge past-badge">Завершен</span>
+                        <span class="card-date">5 января 2026</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Tesla Q4 2025 - Разбор отчета</h3>
+                        <div class="card-tickers">
+                            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script>
+                            <tv-ticker-tag symbol="NASDAQ:TSLA"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Полный анализ квартального отчета Tesla и торговая сессия с результатом +8.5%</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline" onclick="showResults(1)">Посмотреть итоги</button>
+                    </div>
+                </div>
+
+                <!-- Past Webinar 2 -->
+                <div class="webinar-card past">
+                    <div class="card-header">
+                        <span class="card-badge past-badge">Завершен</span>
+                        <span class="card-date">28 декабря 2025</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Фармацевтика: итоги года</h3>
+                        <div class="card-tickers">
+                            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script>
+                            <tv-ticker-tag symbol="NYSE:PFE"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NYSE:JNJ"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:MRNA"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Анализ годовых отчетов фармацевтических компаний. Результат: +12.3%</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline" onclick="showResults(2)">Посмотреть итоги</button>
+                    </div>
+                </div>
+
+                <!-- Past Webinar 3 -->
+                <div class="webinar-card past">
+                    <div class="card-header">
+                        <span class="card-badge past-badge">Завершен</span>
+                        <span class="card-date">20 декабря 2025</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Semiconductor отчеты Q3</h3>
+                        <div class="card-tickers">
+                            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tag.js"></script>
+                            <tv-ticker-tag symbol="NASDAQ:NVDA"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:AMD"></tv-ticker-tag>
+                            <tv-ticker-tag symbol="NASDAQ:INTC"></tv-ticker-tag>
+                        </div>
+                        <p class="card-description">Торговля на отчетах производителей чипов. Результат: +15.7%</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline" onclick="showResults(3)">Посмотреть итоги</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">О проекте</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">📊</div>
+                    <h3>Профессиональный анализ</h3>
+                    <p>Детальный разбор финансовых отчетов с опытными трейдерами</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">💡</div>
+                    <h3>Торговые стратегии</h3>
+                    <p>Реальные стратегии для торговли на новостях и отчетах</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📈</div>
+                    <h3>Проверенные результаты</h3>
+                    <p>Все сделки документируются с полной прозрачностью</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Торговля на отчетах. Все права защищены.</p>
+            <p class="footer-disclaimer">Инвестиции сопряжены с рисками. Торгуйте ответственно.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Results -->
+    <div id="resultsModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
