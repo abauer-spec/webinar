@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
     --bg-primary: #131722;
     --bg-secondary: #1E222D;
