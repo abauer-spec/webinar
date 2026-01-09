@@ -1,6 +1,6 @@
 // Registration function
 function registerWebinar(id) {
-    alert(`Спасибо за интерес! Вы регистрируетесь на вебинар #${id}.\n\nВ реальном проекте здесь будет форма регистрации или перенаправление на страницу оплаты.`);
+    alert(`Спасибо за интерес! Ссылка на вебинар скоро будет добавлена.`);
     // Here you can add real registration logic:
     // - Open registration form modal
     // - Redirect to payment page
