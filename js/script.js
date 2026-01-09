@@ -338,7 +338,7 @@ function reinitializeTradingViewWidgets() {
 
 // Add loading animation on page load
 window.addEventListener('load', function() {
-    document.body.style.opacity = '0.2';
+    document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s';
     setTimeout(() => {
         document.body.style.opacity = '1';
@@ -364,7 +364,7 @@ const observer = new IntersectionObserver(function(entries) {
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.webinar-card');
     cards.forEach((card, index) => {
-        card.style.opacity = '0';
+        card.style.opacity = '0.2';
         card.style.transform = 'translateY(20px)';
         card.style.transition = `all 0.3s ease ${index * 0.1}s`;
         observer.observe(card);
