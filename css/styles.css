@@ -134,6 +134,10 @@ body {
     margin-right: auto;
 }
 
+.code-txt {
+  font-weight: 200;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
