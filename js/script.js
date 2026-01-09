@@ -158,6 +158,36 @@ const webinarResults = {
         "participants": 890
       },
       "description": "Завершаем неделю анализом продаж iPhone и данных по кредитным расходам владельцев карт American Express."
+    },
+    11: {
+      "title": "Потребительский сектор и Фармацевтика",
+      "date": "3 февраля 2026",
+      "tickers": ["NASDAQ:PEP", "NASDAQ:AMGN", "NYSE:PFE", "NASDAQ:SBUX"],
+      "videoId": "WEB_FEB_03",
+      "videoUrl": "...",
+      "screenshot": "...",
+      "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 },
+      "description": "Анализируем отчеты гигантов потребления PepsiCo и Starbucks. Также оцениваем доходы биофармацевтики Pfizer и Amgen."
+    },
+    12: {
+      "title": "Битва Технологий и Платежных Систем",
+      "date": "4 февраля 2026",
+      "tickers": ["NASDAQ:AMD", "NASDAQ:EA", "NASDAQ:GOOGL", "NASDAQ:META", "NYSE:MA", "NYSE:MCD"],
+      "videoId": "WEB_FEB_04",
+      "videoUrl": "...",
+      "screenshot": "...",
+      "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 },
+      "description": "Ключевой день: доходы Google и Meta от рекламы, чипы AMD и игровые тренды EA. Дополняем картину данными Mastercard и McDonald’s."
+    },
+    13: {
+      "title": "Дивидендные аристократы и Телеком",
+      "date": "5 февраля 2026",
+      "tickers": ["NYSE:PM", "NASDAQ:VOD"],
+      "videoId": "WEB_FEB_05",
+      "videoUrl": "...",
+      "screenshot": "...",
+      "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 },
+      "description": "Оцениваем устойчивость Philip Morris и состояние европейского телеком-рынка через отчет Vodafone."
     }
 };
 
