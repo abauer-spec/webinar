@@ -196,6 +196,10 @@ body {
     text-align: center;
 }
 
+.past-section-subtitle {
+    text-align: center;
+}
+
 /* Webinars Grid */
 .webinars-grid {
     display: grid;
@@ -219,7 +223,6 @@ body {
 .webinar-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px var(--shadow);
-    /* border-color: var(--accent-blue); */
     background-color: #422f51ad;
 }
 
@@ -281,44 +284,6 @@ body {
 
 .card-footer {
     padding: 0 20px 20px;
-}
-
-/* About Section */
-.about-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-}
-
-.about-card {
-    text-align: center;
-    padding: 32px 24px;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    transition: all 0.3s;
-}
-
-.about-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent-blue);
-    box-shadow: 0 8px 16px var(--shadow);
-}
-
-.about-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
-}
-
-.about-card h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-    color: var(--text-primary);
-}
-
-.about-card p {
-    font-size: 14px;
-    color: var(--text-secondary);
 }
 
 /* Footer */
