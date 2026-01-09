@@ -338,7 +338,7 @@ function reinitializeTradingViewWidgets() {
 
 // Add loading animation on page load
 window.addEventListener('load', function() {
-    document.body.style.opacity = '0';
+    document.body.style.opacity = '0.2';
     document.body.style.transition = 'opacity 0.5s';
     setTimeout(() => {
         document.body.style.opacity = '1';
