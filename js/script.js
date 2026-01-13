@@ -14,7 +14,7 @@ const webinarResults = {
     "date": "13 января 2026",
     "tickers": ["NYSE:JPM"],
     "videoId": "JPM_WEBINAR_01",
-    "videoUrl": "",
+    "videoUrl": "https://drive.google.com/file/d/1Cq8EhVu0ZtCbuIbwI4aNxTQ1NGUVqAX_/preview",
     "screenshot": "img/13-01-jpm.jpg", 
     "stats": {
         "result": "+6.9%",
