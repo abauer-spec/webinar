@@ -1,9 +1,9 @@
-// 1. Функция регистрации (для кнопок в HTML)
+// 1. Функция регистрации
 window.registerWebinar = function(id) {
     alert(`Спасибо за интерес! Ссылка на вебинар (ID: ${id}) скоро будет добавлена.`);
 };
 
-// 2. Данные вебинаров (твои актуальные данные)
+// 2. Данные вебинаров
 const webinarResults = {
     1: {
         "title": "Старт сезона отчётов: Главный банк США",
@@ -19,11 +19,10 @@ const webinarResults = {
         "date": "14 января 2026",
         "tickers": ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
         "videoUrl": "https://drive.google.com/file/d/1q6vOX7c61-uFO2BJfyudgDJ8S2XmDt-Q/preview",
-        "screenshot": "img/default-bank.jpg", // замени на свой путь позже
+        "screenshot": "img/default-bank.jpg",
         "stats": { "result": "+18.5%", "trades": 3, "duration": "48 мин.", "participants": 456 },
         "description": "Анализируем отчетность крупнейших коммерческих банков США. Обсуждаем влияние процентных ставок."
     },
-    // ID 3-13 сокращены для краткости, но в твоем файле они будут такими же
     3: { "title": "Инвестиционные гиганты", "date": "15 января 2026", "tickers": ["NYSE:GS", "NYSE:MS"], "stats": { "result": "+9.8%", "trades": 4, "duration": "60 мин.", "participants": 312 }, "description": "Разбор Goldman Sachs и Morgan Stanley.", "videoUrl": "", "screenshot": "" },
     4: { "title": "Технологии и медицина", "date": "21 января 2026", "tickers": ["NASDAQ:NFLX", "NASDAQ:IBKR"], "stats": { "result": "+21.2%", "trades": 5, "duration": "55 мин.", "participants": 520 }, "description": "Netflix и IBKR.", "videoUrl": "", "screenshot": "" },
     5: { "title": "Мировые транзакции", "date": "22 января 2026", "tickers": ["NYSE:V", "NYSE:PG"], "stats": { "result": "+14.1%", "trades": 3, "duration": "42 мин.", "participants": 290 }, "description": "Visa и P&G.", "videoUrl": "", "screenshot": "" },
@@ -37,18 +36,26 @@ const webinarResults = {
     13: { "title": "Дивидендные аристократы", "date": "5 февраля 2026", "tickers": ["NYSE:PM"], "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 }, "description": "Philip Morris.", "videoUrl": "", "screenshot": "" }
 };
 
-// 3. Функции модального окна и медиа
+// 3. Функции управления модалкой и медиа
 window.toggleFullScreen = function(img) {
-    if (!document.fullscreenElement) {
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
         if (img.requestFullscreen) { img.requestFullscreen(); }
-        else if (img.webkitRequestFullscreen) { img.webkitRequestFullscreen(); }
+        else if (img.webkitRequestFullscreen) { img.webkitRequestFullscreen(); } // Safari iOS
     } else {
-        document.exitFullscreen();
+        if (document.exitFullscreen) { document.exitFullscreen(); }
+        else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
     }
 };
 
-window.activateVideo = function(container, url) {
-    container.innerHTML = `<iframe src="${url}?autoplay=1" allow="autoplay; allowfullscreen" style="width:100%; height:100%; border:0;" allowfullscreen></iframe>`;
+window.closeModal = function() {
+    const modal = document.getElementById('resultsModal');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        // Очищаем iframe при закрытии, чтобы видео не играло на фоне
+        const container = modal.querySelector('.video-container');
+        if (container) container.innerHTML = container.innerHTML;
+    }
 };
 
 window.showResults = function(id) {
@@ -94,7 +101,7 @@ window.showResults = function(id) {
         
         <div class="modal-section">
             <h3>Результаты торговли</h3>
-            <img src="${data.screenshot}" onclick="toggleFullScreen(this)" 
+            <img src="${data.screenshot}" onclick="window.toggleFullScreen(this)" 
                  style="width: 100%; border-radius: 12px; cursor: zoom-in; border: 1px solid #333;" title="Кликните для увеличения">
         </div>
         
@@ -108,16 +115,19 @@ window.showResults = function(id) {
     document.body.style.overflow = 'hidden';
 };
 
-window.closeModal = function() {
-    document.getElementById('resultsModal').style.display = 'none';
-    document.body.style.overflow = 'auto';
+// 4. Глобальные слушатели событий
+window.onclick = function(event) {
+    const modal = document.getElementById('resultsModal');
+    if (event.target === modal) {
+        window.closeModal();
+    }
 };
 
-// Закрытие по клику вне окна или Esc
-window.addEventListener('click', (e) => { if (e.target.id === 'resultsModal') closeModal(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', (e) => { 
+    if (e.key === 'Escape') window.closeModal(); 
+});
 
-// Анимация карточек
+// 5. Анимация появления
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.webinar-card');
     cards.forEach((card, i) => {
