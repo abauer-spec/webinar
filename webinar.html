@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямой эфир - Торговля на отчетах</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Минимальная правка только для высоты контейнера вебинара */
+        .webinar-frame-container {
+            width: 100%;
+            min-height: 650px; /* Чтобы форма входа не обрезалась */
+            margin-top: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 768px) {
+            .webinar-frame-container { min-height: 500px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero" style="min-height: 100vh; display: flex; align-items: center;">
+        <div class="container">
+            <h1 class="hero-title">Комната вебинара</h1>
+            <p class="hero-subtitle">Введите ваши данные для входа в прямую трансляцию</p>
+            
+            <div class="webinar-frame-container">
+                <script type="text/javascript" src="https://embed.clickmeeting.com/embed_conference.html?r=1718302089591310&w=auto&h=auto"></script>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <a href="index.html" class="btn btn-outline" style="text-decoration: none; display: inline-block; border: 1px solid #fff; padding: 10px 20px; border-radius: 8px; color: #fff;">
+                    ← Вернуться назад
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TradingView. Все права защищены.</p>
+            <p class="footer-disclaimer">Инвестиции сопряжены с рисками. Торгуйте ответственно.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
