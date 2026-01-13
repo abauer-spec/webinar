@@ -3,7 +3,7 @@ window.registerWebinar = function(id) {
     alert(`Спасибо за интерес! Ссылка на вебинар (ID: ${id}) скоро будет добавлена.`);
 };
 
-// 2. Данные вебинаров
+// 2. Данные вебинаров (твои актуальные данные)
 const webinarResults = {
     1: {
         "title": "Старт сезона отчётов: Главный банк США",
@@ -36,11 +36,11 @@ const webinarResults = {
     13: { "title": "Дивидендные аристократы", "date": "5 февраля 2026", "tickers": ["NYSE:PM"], "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 }, "description": "Philip Morris.", "videoUrl": "", "screenshot": "" }
 };
 
-// 3. Функции управления модалкой и медиа
+// 3. Функции управления модалкой
 window.toggleFullScreen = function(img) {
     if (!document.fullscreenElement && !document.webkitFullscreenElement) {
         if (img.requestFullscreen) { img.requestFullscreen(); }
-        else if (img.webkitRequestFullscreen) { img.webkitRequestFullscreen(); } // Safari iOS
+        else if (img.webkitRequestFullscreen) { img.webkitRequestFullscreen(); } 
     } else {
         if (document.exitFullscreen) { document.exitFullscreen(); }
         else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
@@ -52,7 +52,7 @@ window.closeModal = function() {
     if (modal) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
-        // Очищаем iframe при закрытии, чтобы видео не играло на фоне
+        // Очистка iframe для остановки видео
         const container = modal.querySelector('.video-container');
         if (container) container.innerHTML = container.innerHTML;
     }
@@ -66,14 +66,16 @@ window.showResults = function(id) {
     if (!data) return;
 
     let tickerTags = '';
-    data.tickers.forEach(ticker => {
-        tickerTags += `<tv-ticker-tag symbol="${ticker}"></tv-ticker-tag>`;
-    });
+    if (data.tickers) {
+        data.tickers.forEach(ticker => {
+            tickerTags += `<tv-ticker-tag symbol="${ticker}"></tv-ticker-tag>`;
+        });
+    }
 
     modalBody.innerHTML = `
         <div class="modal-header">
-            <h2 class="modal-title">${data.title}</h2>
-            <p class="modal-date">${data.date}</p>
+            <h2 class="modal-title">${data.title || 'Результаты вебинара'}</h2>
+            <p class="modal-date">${data.date || ''}</p>
             <div class="card-tickers" style="margin-top: 16px;">${tickerTags}</div>
         </div>
         
@@ -115,28 +117,29 @@ window.showResults = function(id) {
     document.body.style.overflow = 'hidden';
 };
 
-// 4. Глобальные слушатели событий
-window.onclick = function(event) {
+// 4. ИСПРАВЛЕННЫЕ СЛУШАТЕЛИ (работают на Firebase/Mobile)
+window.addEventListener('click', function(event) {
     const modal = document.getElementById('resultsModal');
-    if (event.target === modal) {
+    // Проверяем, что клик был именно по фону модалки, а не по контенту внутри
+    if (event.target.id === 'resultsModal') {
         window.closeModal();
     }
-};
+});
 
 document.addEventListener('keydown', (e) => { 
     if (e.key === 'Escape') window.closeModal(); 
 });
 
-// 5. Анимация появления
+// 5. Анимация
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.webinar-card');
     cards.forEach((card, i) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
-        card.style.transition = `all 0.5s ease ${i * 0.05}s`;
+        card.style.transition = `all 0.4s ease ${i * 0.05}s`;
         setTimeout(() => {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-        }, 100);
+        }, 50);
     });
 });
