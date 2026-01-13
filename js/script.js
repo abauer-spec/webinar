@@ -82,12 +82,13 @@ window.showResults = function(id) {
         
         <div class="modal-section">
             <h3>Видео-запись</h3>
-            <div class="video-container" onclick="activateVideo(this, '${data.videoUrl}')" 
-                 style="background: #1a1a1a url('${data.screenshot}') center/cover; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid #333;">
-                <div style="width: 60px; height: 60px; background: rgba(0,0,0,0.8); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2; border: 2px solid white;">
-                    <div style="width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 20px solid white; margin-left: 5px;"></div>
-                </div>
-                <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4);"></div>
+            <div class="video-container" 
+                 style="position: relative; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid #333; background: #000;">
+                <iframe src="${data.videoUrl}" 
+                        allow="autoplay; allowfullscreen" 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                        allowfullscreen>
+                </iframe>
             </div>
         </div>
         
