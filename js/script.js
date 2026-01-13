@@ -11,7 +11,7 @@ const webinarResults = {
         "tickers": ["NYSE:JPM"],
         "videoUrl": "https://drive.google.com/file/d/1Cq8EhVu0ZtCbuIbwI4aNxTQ1NGUVqAX_/preview",
         "screenshot": "img/13-01-jpm.jpg", 
-        "stats": { "result": "+6.9%", "trades": 1, "duration": "42 мин.", "participants": 328 },
+        "stats": { "result": "+6.5%", "trades": 1, "duration": "32 мин.", "participants": 328 },
         "description": "Разбор первого крупного отчета в сезоне. Анализ финансовых показателей JPMorgan Chase и вход в сделку на волатильности."
     },
     2: {
