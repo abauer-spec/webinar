@@ -10,19 +10,19 @@ function registerWebinar(id) {
 // Modal data for past webinars
 const webinarResults = {
     1: {
-      "title": "Старт сезона отчётов: Главный банк США",
-      "date": "13 января 2026",
-      "tickers": ["NYSE:JPM"],
-      "videoId": "JPM_WEBINAR_01",
-      "videoUrl": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
-      "screenshot": "https://drive.google.com/file/d/YOUR_SCREENSHOT_ID/view?usp=sharing",
-      "stats": {
-        "result": "+12.3%",
-        "trades": 2,
-        "duration": "52 мин.",
-        "participants": 380
-      },
-      "description": "Анализируем результаты JPMorgan Chase. Обсуждаем прогнозы по кредитованию и ожидания главы банка Джейми Даймона на 2026 год."
+    "title": "Старт сезона отчётов: Главный банк США",
+    "date": "13 января 2026",
+    "tickers": ["NYSE:JPM"],
+    "videoId": "JPM_WEBINAR_01",
+    "videoUrl": "",
+    "screenshot": "img/13-01-jpm.jpg", 
+    "stats": {
+        "result": "+6.9%",
+        "trades": 1,
+        "duration": "42 мин.",
+        "participants": 328
+            },
+    "description": "Разбор первого крупного отчета в сезоне. Анализ финансовых показателей JPMorgan Chase и вход в сделку на волатильности после публикации релиза."
     },
     2: {
       "title": "Банковский сектор (Открытие сезона отчетов)",
