@@ -256,18 +256,32 @@ body {
     border: 1px solid #6c435c;
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.3s;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: transform, opacity;
+    transition: 
+        transform 0.5s ease-out, 
+        opacity 0.5s ease-out, 
+        border-color 0.3s ease;
 }
 
-/* .webinar-card:hover {
-border: 1px solid #8135c0;
-} */
+.webinar-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.webinar-card.past.visible {
+    opacity: 0.85;
+}
 
 .webinar-card.past {
-    opacity: 0.85;
     border: 1px solid #7494eb;
+}
+
+.webinar-card:hover {
+    border-color: #8135c0;
 }
 
 .card-header {
