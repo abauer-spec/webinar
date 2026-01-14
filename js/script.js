@@ -18,12 +18,12 @@ const webinarResults = {
     "title": "Банковский сектор (Открытие сезона отчетов)",
     "date": "14 января 2026",
     "tickers": ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
-    "videoUrl": "",
+    "videoUrl": "https://drive.google.com/file/d/1c1v_biubdWWrlWeb28q9H6UExjmVxnr-/preview",
     "screenshot": "img/14-01-bac-wfc-c.jpg",
     "stats": { 
         "result": "+7.7%", 
         "trades": 3, 
-        "duration": "42 мин.", 
+        "duration": "34 мин.", 
         "participants": 2203 
     },
     "description": "В ходе вебинара детально изучили финансовые показатели BAC, WFC и Citigroup в условиях текущих процентных ставок. На практике разобрали 3 успешных сделки с общей доходностью 7.7% за сессию."
