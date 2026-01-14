@@ -177,3 +177,16 @@ function updateTimer() {
         // Обновление каждую секунду
         setInterval(updateTimer, 1000);
         updateTimer();
+
+function toggleAltLinks() {
+    var block = document.getElementById('alt-links-block');
+    if (block) {
+        if (block.className.indexOf('hidden') !== -1) {
+            // Если скрыто — показываем
+            block.className = "alt-links-content";
+        } else {
+            // Если показано — скрываем
+            block.className = "alt-links-content hidden";
+        }
+    }
+}
