@@ -9,46 +9,107 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Минимальная правка только для высоты контейнера вебинара */
+        /* Стили для таймера в стиле твоего сайта */
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .timer-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            min-width: 70px;
+        }
+        .timer-val {
+            display: block;
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .timer-label {
+            display: block;
+            font-size: 12px;
+            color: #a0a0a0;
+            text-transform: uppercase;
+        }
         .webinar-frame-container {
             width: 100%;
-            min-height: 650px; /* Чтобы форма входа не обрезалась */
+            min-height: 650px;
             margin-top: 30px;
             border-radius: 12px;
             overflow: hidden;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        @media (max-width: 768px) {
-            .webinar-frame-container { min-height: 500px; }
         }
     </style>
 </head>
 <body>
 
-    <section class="hero" style="min-height: 100vh; display: flex; align-items: center;">
+    <section class="hero" style="min-height: 100vh; padding: 60px 0;">
         <div class="container">
-            <h1 class="hero-title">Комната вебинара</h1>
-            <p class="hero-subtitle">Введите ваши данные для входа в прямую трансляцию</p>
+            <h1 class="hero-title">До начала трансляции:</h1>
+            
+            <div class="timer-container" id="timer">
+                <div class="timer-item">
+                    <span class="timer-val" id="days">00</span>
+                    <span class="timer-label">д</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-val" id="hours">05</span>
+                    <span class="timer-label">ч</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-val" id="minutes">00</span>
+                    <span class="timer-label">м</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-val" id="seconds">00</span>
+                    <span class="timer-label">с</span>
+                </div>
+            </div>
+
+            <p class="hero-subtitle">Вебинар начнется сегодня в 17:00 по МСК</p>
             
             <div class="webinar-frame-container">
                 <script type="text/javascript" src="https://embed.clickmeeting.com/embed_conference.html?r=1718302089591310&w=auto&h=auto"></script>
             </div>
 
             <div style="margin-top: 40px;">
-                <a href="index.html" class="btn btn-outline" style="text-decoration: none; display: inline-block; border: 1px solid #fff; padding: 10px 20px; border-radius: 8px; color: #fff;">
-                    ← Вернуться назад
-                </a>
+                <a href="index.html" class="btn btn-outline" style="text-decoration: none;">← Вернуться на главную</a>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 TradingView. Все права защищены.</p>
-            <p class="footer-disclaimer">Инвестиции сопряжены с рисками. Торгуйте ответственно.</p>
-        </div>
-    </footer>
+    <script>
+        function updateTimer() {
+            // Устанавливаем целевое время: Сегодня, 17:00 МСК
+            const now = new Date();
+            const target = new Date(2026, 0, 14, 17, 0); // 14 января 2026 в 17:00
+            
+            target.setHours(17, 0, 0, 0); // 17:00:00
+
+            // Если 17:00 уже прошло, таймер покажет 0
+            let diff = target - now;
+            if (diff < 0) diff = 0;
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const m = Math.floor((diff / 1000 / 60) % 60);
+            const s = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('days').innerText = d.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+        }
+
+        // Запуск таймера каждую секунду
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Инициализация сразу
+    </script>
 
 </body>
 </html>
