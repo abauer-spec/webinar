@@ -261,11 +261,9 @@ body {
     flex-direction: column;
 }
 
-.webinar-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px var(--shadow);
-    background-color: #422f51ad;
-}
+/* .webinar-card:hover {
+border: 1px solid #8135c0;
+} */
 
 .webinar-card.past {
     opacity: 0.85;
