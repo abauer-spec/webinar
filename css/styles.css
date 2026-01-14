@@ -633,3 +633,48 @@ button:disabled:hover {
     cursor: not-allowed;
     transform: none; 
 }
+
+.timer-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .timer-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            min-width: 80px;
+            text-align: center;
+        }
+        .timer-val {
+            display: block;
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1;
+        }
+        .timer-label {
+            display: block;
+            font-size: 12px;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+        .webinar-frame-container {
+            width: 100%;
+            min-height: 650px;
+            margin-top: 40px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        @media (max-width: 768px) {
+            .webinar-frame-container { min-height: 450px; }
+            .timer-val { font-size: 24px; }
+            .timer-item { min-width: 60px; padding: 10px; }
+        }
