@@ -175,9 +175,9 @@ function updateTimer() {
         setInterval(updateTimer, 1000);
         updateTimer();
 
-function toggleAltLinks() {
-    var block = document.getElementById('alt-links-block');
-    if (block) {
-        block.classList.toggle('show');
-    }
-}
+// function toggleAltLinks() {
+//     var block = document.getElementById('alt-links-block');
+//     if (block) {
+//         block.classList.toggle('show');
+//     }
+// }
