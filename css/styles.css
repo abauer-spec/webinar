@@ -690,11 +690,14 @@ button:disabled:hover {
 }
 
 .alt-links-trigger {
-    color: #fff;
-    font-size: 14px;
-    text-decoration: underline;
+    color: rgb(255 255 255 / 50%);
+    font-size: 0.8rem;
     cursor: pointer;
     display: inline-block;
+}
+
+.alt-links-trigger:hover {
+  color: rgb(255 255 255);
 }
 
 .alt-buttons-row {
