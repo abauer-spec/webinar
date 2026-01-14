@@ -160,7 +160,6 @@ function updateTimer() {
                 document.getElementById('hours').innerText = "00";
                 document.getElementById('minutes').innerText = "00";
                 document.getElementById('seconds').innerText = "00";
-                document.getElementById('main-title').innerText = "Трансляция началась!";
                 return;
             }
 
