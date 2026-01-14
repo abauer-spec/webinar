@@ -15,14 +15,19 @@ const webinarResults = {
         "description": "Разбор первого крупного отчета в сезоне. Анализ финансовых показателей JPMorgan Chase и вход в сделку на волатильности."
     },
     2: {
-        "title": "Банковский сектор (Открытие сезона отчетов)",
-        "date": "14 января 2026",
-        "tickers": ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
-        "videoUrl": "https://drive.google.com/file/d/1q6vOX7c61-uFO2BJfyudgDJ8S2XmDt-Q/preview",
-        "screenshot": "img/default-bank.jpg",
-        "stats": { "result": "+18.5%", "trades": 3, "duration": "48 мин.", "participants": 456 },
-        "description": "Анализируем отчетность крупнейших коммерческих банков США. Обсуждаем влияние процентных ставок."
+    "title": "Банковский сектор (Открытие сезона отчетов)",
+    "date": "14 января 2026",
+    "tickers": ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
+    "videoUrl": "ССЫЛКА_НА_ВИДЕО",
+    "screenshot": "img/14-01-bac-wfc-c.jpg",
+    "stats": { 
+        "result": "+7.7%", 
+        "trades": 3, 
+        "duration": "42 мин.", 
+        "participants": 2203 
     },
+    "description": "В ходе вебинара детально изучили финансовые показатели BAC, WFC и Citigroup в условиях текущих процентных ставок. На практике разобрали 3 успешных сделки с общей доходностью 7.7% за сессию."
+},
     3: { "title": "Инвестиционные гиганты", "date": "15 января 2026", "tickers": ["NYSE:GS", "NYSE:MS"], "stats": { "result": "+9.8%", "trades": 4, "duration": "60 мин.", "participants": 312 }, "description": "Разбор Goldman Sachs и Morgan Stanley.", "videoUrl": "", "screenshot": "" },
     4: { "title": "Технологии и медицина", "date": "21 января 2026", "tickers": ["NASDAQ:NFLX", "NASDAQ:IBKR"], "stats": { "result": "+21.2%", "trades": 5, "duration": "55 мин.", "participants": 520 }, "description": "Netflix и IBKR.", "videoUrl": "", "screenshot": "" },
     5: { "title": "Мировые транзакции", "date": "22 января 2026", "tickers": ["NYSE:V", "NYSE:PG"], "stats": { "result": "+14.1%", "trades": 3, "duration": "42 мин.", "participants": 290 }, "description": "Visa и P&G.", "videoUrl": "", "screenshot": "" },
