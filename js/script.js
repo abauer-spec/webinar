@@ -18,7 +18,7 @@ const webinarResults = {
     "title": "Банковский сектор (Открытие сезона отчетов)",
     "date": "14 января 2026",
     "tickers": ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
-    "videoUrl": "ССЫЛКА_НА_ВИДЕО",
+    "videoUrl": "",
     "screenshot": "img/14-01-bac-wfc-c.jpg",
     "stats": { 
         "result": "+7.7%", 
