@@ -683,18 +683,21 @@ button:disabled:hover {
 
 /* 2. Настраиваем блок с кнопками так, чтобы он не занимал места, пока закрыт */
 .alt-links-content {
-    max-height: 0;           /* Схлопываем высоту до 0 */
-    opacity: 0;              /* Делаем полностью прозрачным */
-    overflow: hidden;        /* Прячем содержимое, которое не влезло в 0 высоты */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
     margin-top: 0;
+    will-change: max-height, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* 3. Этот класс будет добавляться через JS при клике */
 .alt-links-content.show {
-    max-height: 200px;       /* Разрешаем блоку вырасти (подберите под высоту кнопок) */
-    opacity: 1;              /* Проявляем */
-    margin-top: 15px;        /* Появляется отступ сверху только при открытии */
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 15px;
 }
 
 /* ОСТАЛЬНЫЕ ВАШИ СТИЛИ БЕЗ ИЗМЕНЕНИЙ */
