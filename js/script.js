@@ -134,13 +134,10 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.webinar-card');
     cards.forEach((card, i) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `all 0.4s ease ${i * 0.05}s`;
-        setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, 50);
+        card.style.transitionDelay = `${i * 0.1}s`;
+        requestAnimationFrame(() => {
+            card.classList.add('visible');
+        });
     });
 });
 
