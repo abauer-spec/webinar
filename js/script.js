@@ -154,7 +154,7 @@ function updateTimer() {
             
             // Установка даты: 14 января 2026, 17:00 по Москве (UTC+3)
             // Если нужно поменять дату, меняй строку ниже в формате ГГГГ-ММ-ДДTЧЧ:ММ:СС+03:00
-            const targetDate = "2026-01-14T17:00:00+03:00";
+            const targetDate = "2026-01-15T17:00:00+03:00";
             const target = new Date(targetDate);
             
             const diff = target - now;
