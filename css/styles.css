@@ -105,7 +105,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 150px 0;
+    padding: 100px 0;
     text-align: center;
     background: linear-gradient(rgb(0 0 0 / 11%), rgb(0 0 0 / 77%)), url(../img/bg.png);
     background-size: cover;
@@ -711,7 +711,7 @@ button:disabled:hover {
 .alt-links-content.show {
     max-height: 200px;
     opacity: 1;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 /* ОСТАЛЬНЫЕ ВАШИ СТИЛИ БЕЗ ИЗМЕНЕНИЙ */
@@ -722,14 +722,10 @@ button:disabled:hover {
 }
 
 .alt-links-trigger {
-    color: rgb(255 255 255 / 50%);
-    font-size: 0.8rem;
+    color: rgb(255 255 255 / 75%);
+    font-size: 0.9rem;
     cursor: pointer;
     display: inline-block;
-}
-
-.alt-links-trigger:hover {
-  color: rgb(255 255 255);
 }
 
 .alt-buttons-row {
@@ -743,10 +739,16 @@ button:disabled:hover {
     padding: 10px 15px;
     background: rgba(255, 255, 255, 0.15); 
     border: 1px solid #666;
-    color: #fff;
+    color: rgb(255 255 255 / 75%);
     text-decoration: none;
     border-radius: 8px;
     margin: 5px;
     font-size: 14px;
     min-width: 100px; 
+  transition: all 0.15s;
+}
+
+.btn-alt:hover {
+  color: rgb(255 255 255);
+  border: 1px solid #dddddd;
 }
