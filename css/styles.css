@@ -679,10 +679,25 @@ button:disabled:hover {
 
 /* СРЫТАЯ КНОПКА */
 /* Базовое состояние — скрыто */
-.hidden {
-    display: none !important;
+/* 1. Удаляем .hidden { display: none !important; } */
+
+/* 2. Настраиваем блок с кнопками так, чтобы он не занимал места, пока закрыт */
+.alt-links-content {
+    max-height: 0;           /* Схлопываем высоту до 0 */
+    opacity: 0;              /* Делаем полностью прозрачным */
+    overflow: hidden;        /* Прячем содержимое, которое не влезло в 0 высоты */
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    margin-top: 0;
 }
 
+/* 3. Этот класс будет добавляться через JS при клике */
+.alt-links-content.show {
+    max-height: 200px;       /* Разрешаем блоку вырасти (подберите под высоту кнопок) */
+    opacity: 1;              /* Проявляем */
+    margin-top: 15px;        /* Появляется отступ сверху только при открытии */
+}
+
+/* ОСТАЛЬНЫЕ ВАШИ СТИЛИ БЕЗ ИЗМЕНЕНИЙ */
 .alt-links-container {
     margin-top: 20px;
     text-align: center;
@@ -709,7 +724,6 @@ button:disabled:hover {
 .btn-alt {
     display: inline-block;
     padding: 10px 15px;
-    background: #333; /* Сплошной цвет для старых экранов (вместо прозрачности) */
     background: rgba(255, 255, 255, 0.15); 
     border: 1px solid #666;
     color: #fff;
