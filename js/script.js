@@ -143,3 +143,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 50);
     });
 });
+
+function updateTimer() {
+            const now = new Date();
+            
+            // Установка даты: 14 января 2026, 17:00 по Москве (UTC+3)
+            // Если нужно поменять дату, меняй строку ниже в формате ГГГГ-ММ-ДДTЧЧ:ММ:СС+03:00
+            const targetDate = "2026-01-14T17:00:00+03:00";
+            const target = new Date(targetDate);
+            
+            const diff = target - now;
+
+            if (diff <= 0) {
+                // Если время вышло
+                document.getElementById('days').innerText = "00";
+                document.getElementById('hours').innerText = "00";
+                document.getElementById('minutes').innerText = "00";
+                document.getElementById('seconds').innerText = "00";
+                document.getElementById('main-title').innerText = "Трансляция началась!";
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const m = Math.floor((diff / 1000 / 60) % 60);
+            const s = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('days').innerText = d.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+        }
+
+        // Обновление каждую секунду
+        setInterval(updateTimer, 1000);
+        updateTimer();
