@@ -14,7 +14,25 @@
 
    <section class="hero" style="min-height: 100vh; padding: 40px 0; display: flex; align-items: center;">
     <div class="container" style="width: 100%;">
-        <h1 class="hero-title" style="text-align: center; margin-bottom: 10px;">Прямой эфир</h1>
+        <h1 class="hero-title" style="text-align: center;">Прямой эфир через:</h1>
+        <div class="timer-container">
+                <div class="timer-item">
+                    <span class="timer-val" id="days">00</span>
+                    <span class="timer-label">дн.</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-val" id="hours">00</span>
+                    <span class="timer-label">час.</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-val" id="minutes">00</span>
+                    <span class="timer-label">мин.</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-val" id="seconds">00</span>
+                    <span class="timer-label">сек.</span>
+                </div>
+            </div>
         
         <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         <iframe 
@@ -50,5 +68,6 @@
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
