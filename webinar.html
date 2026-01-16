@@ -8,92 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Стили для таймера, вписанные в твой дизайн */
-        .timer-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px 0;
-        }
-        .timer-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 12px;
-            min-width: 80px;
-            text-align: center;
-        }
-        .timer-val {
-            display: block;
-            font-size: 32px;
-            font-weight: 700;
-            color: #ffffff;
-            line-height: 1;
-        }
-        .timer-label {
-            display: block;
-            font-size: 12px;
-            color: #a0a0a0;
-            text-transform: uppercase;
-            margin-top: 5px;
-            letter-spacing: 1px;
-        }
-        .webinar-frame-container {
-            width: 100%;
-            min-height: 650px;
-            margin-top: 40px;
-            border-radius: 16px;
-            overflow: hidden;
-            background: #000;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-        @media (max-width: 768px) {
-            .webinar-frame-container { min-height: 450px; }
-            .timer-val { font-size: 24px; }
-            .timer-item { min-width: 60px; padding: 10px; }
-        }
-    </style>
 </head>
 <body>
 
-    <section class="hero" style="min-height: 100vh; padding: 80px 0; display: flex; align-items: center;">
-        <div class="container">
-            <h1 class="hero-title" id="main-title">До начала трансляции:</h1>
-            
-            <div class="timer-container">
-                <div class="timer-item">
-                    <span class="timer-val" id="days">00</span>
-                    <span class="timer-label">д</span>
-                </div>
-                <div class="timer-item">
-                    <span class="timer-val" id="hours">00</span>
-                    <span class="timer-label">ч</span>
-                </div>
-                <div class="timer-item">
-                    <span class="timer-val" id="minutes">00</span>
-                    <span class="timer-label">м</span>
-                </div>
-                <div class="timer-item">
-                    <span class="timer-val" id="seconds">00</span>
-                    <span class="timer-label">с</span>
-                </div>
+    <section class="hero" style="min-height: 100vh; padding: 40px 0; display: flex; align-items: center;">
+    <div class="container" style="width: 100%;">
+        <h1 class="hero-title" style="text-align: center; margin-bottom: 20px;">Прямой эфир</h1>
+        
+        <div id="jitsi-container" class="webinar-frame-container">
             </div>
 
-            <p class="hero-subtitle">Начало сегодня в 17:00 по московскому времени</p>
-            
-            <div class="webinar-frame-container">
-                <script type="text/javascript" src="https://embed.clickmeeting.com/embed_conference.html?r=1718302089591310&w=auto&h=auto"></script>
-            </div>
-
-            <div style="margin-top: 50px;">
-                <a href="index.html" class="btn btn-outline" style="text-decoration: none; opacity: 0.7;">
-                    ← Вернуться к списку вебинаров
-                </a>
-            </div>
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="index.html" class="btn btn-outline" style="text-decoration: none; opacity: 0.7;">
+                ← Назад
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer class="footer">
         <div class="container">
@@ -102,42 +33,7 @@
         </div>
     </footer>
 
-    <script>
-        function updateTimer() {
-            const now = new Date();
-            
-            // Установка даты: 14 января 2026, 17:00 по Москве (UTC+3)
-            // Если нужно поменять дату, меняй строку ниже в формате ГГГГ-ММ-ДДTЧЧ:ММ:СС+03:00
-            const targetDate = "2026-01-14T17:00:00+03:00";
-            const target = new Date(targetDate);
-            
-            const diff = target - now;
-
-            if (diff <= 0) {
-                // Если время вышло
-                document.getElementById('days').innerText = "00";
-                document.getElementById('hours').innerText = "00";
-                document.getElementById('minutes').innerText = "00";
-                document.getElementById('seconds').innerText = "00";
-                document.getElementById('main-title').innerText = "Трансляция началась!";
-                return;
-            }
-
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const m = Math.floor((diff / 1000 / 60) % 60);
-            const s = Math.floor((diff / 1000) % 60);
-
-            document.getElementById('days').innerText = d.toString().padStart(2, '0');
-            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
-            document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
-            document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
-        }
-
-        // Обновление каждую секунду
-        setInterval(updateTimer, 1000);
-        updateTimer();
-    </script>
-
+<script src="https://meet.jit.si/external_api.js"></script>
+<script src="js/video.js"></script>
 </body>
 </html>
