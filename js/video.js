@@ -1,40 +1,57 @@
 // js/video.js
 function initWebinar() {
     const container = document.querySelector('#jitsi-container');
-    
-    // Проверка: есть ли контейнер на странице
     if (!container) return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const isAdmin = urlParams.get('admin') === 'true';
 
     const domain = 'meet.jit.si';
     const options = {
-        roomName: 'TradingView_Live_Room_2026_Unique', // Убедись, что имя сложное
+        roomName: 'TradingView_Secure_Live_2026_xyz', // Придумай очень длинный ID
         width: '100%',
         height: '100%',
         parentNode: container,
-        lang: 'ru',
         configOverwrite: {
             startWithAudioMuted: true,
-            prejoinPageEnabled: false,
+            startWithVideoMuted: true,
+            prejoinPageEnabled: false, // Отключает ввод имени и настройку камеры
             disableDeepLinking: true,
+            enableWelcomePage: false,
+            enableLobby: false,
+            // Скрываем количество участников и их имена для зрителей
+            disableRemoteMute: true,
+            remoteVideoMenu: {
+                disableKick: true
+            }
         },
         interfaceConfigOverwrite: {
-            // Если в ссылке есть ?admin=true, даем права админа
-            TOOLBAR_BUTTONS: window.location.search.includes('admin=true') 
-                ? ['microphone', 'camera', 'desktop', 'fullscreen', 'fittowindow', 'chat', 'settings'] 
-                : ['fullscreen', 'fittowindow'],
+            // ДЛЯ ЗРИТЕЛЯ (не админа) убираем ВООБЩЕ ВСЁ
+            TOOLBAR_BUTTONS: isAdmin 
+                ? ['microphone', 'camera', 'desktop', 'fittowindow', 'hangup'] 
+                : ['fullscreen'], // Зритель может только развернуть на весь экран
+            
+            SETTINGS_SECTIONS: isAdmin ? ['devices', 'language', 'profile'] : [],
+            VIDEO_LAYOUT_FIT: 'both',
+            SHOW_JITSI_WATERMARK: false,
+            SHOW_WATERMARK_FOR_GUESTS: false,
+            SHOW_BRAND_WATERMARK: false,
+            DISPLAY_WELCOME_PAGE: false,
+            // Скрываем список участников
+            filmStripOnly: false, 
+            VERTICAL_FILMSTRIP: false,
+            HIDE_INVITE_ON_PAGE_START: true,
+            RECENT_LIST_ENABLED: false
         }
     };
 
-    // Создаем интерфейс Jitsi
     const api = new JitsiMeetExternalAPI(domain, options);
 
-    // Добавляем обработчик ошибок
-    api.addEventListener('videoConferenceLeft', () => {
-        window.location.href = 'index.html';
-    });
+    // Если зритель — автоматически выключаем ему всё, чтобы он даже не отображался
+    if (!isAdmin) {
+        api.executeCommand('toggleFilmStrip'); // Скрывает иконки участников
+        api.executeCommand('subject', 'Прямой эфир'); // Убирает название комнаты
+    }
 }
 
-// Запускаем через небольшую паузу после загрузки страницы
-window.onload = () => {
-    setTimeout(initWebinar, 500);
-};
+window.onload = () => { setTimeout(initWebinar, 500); };
