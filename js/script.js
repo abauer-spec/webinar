@@ -25,7 +25,20 @@ const webinarResults = {
         "description": "В ходе вебинара детально изучили финансовые показатели BAC, WFC и Citigroup в условиях текущих процентных ставок. На практике разобрали 3 успешных сделки с общей доходностью 7.7% за сессию."
     },
     3: { "title": "Инвестиционные гиганты", "date": "15 января 2026", "tickers": ["NYSE:GS", "NYSE:MS"], "stats": { "result": "+9.8%", "trades": 4, "duration": "60 мин.", "participants": 312 }, "description": "Разбор Goldman Sachs и Morgan Stanley.", "videoUrl": "", "screenshot": "" },
-    4: { "title": "Технологии и медицина", "date": "21 января 2026", "tickers": ["NASDAQ:NFLX", "NASDAQ:IBKR"], "stats": { "result": "+21.2%", "trades": 5, "duration": "55 мин.", "participants": 520 }, "description": "Netflix и IBKR.", "videoUrl": "", "screenshot": "" },
+    4: {
+    "title": "Технологии и медицина: Потребительский спрос",
+    "date": "21 января 2026",
+    "tickers": ["NASDAQ:NFLX", "NASDAQ:IBKR", "NYSE:JNJ"],
+    "videoUrl": "ССЫЛКА_НА_ВИДЕО", // добавьте ссылку, когда загрузите
+    "screenshot": "img/21-01-netflix.jpg", 
+    "stats": { 
+        "result": "+6.25%", 
+        "trades": 1, 
+        "duration": "38 мин.", 
+        "participants": 4002 
+    },
+    "description": "Проанализировали отчет Netflix: взрывной рост подписчиков подтвердил доминирование стриминга. По Johnson & Johnson разобрали влияние судебных издержек на прибыль. Успешно отработали одну сделку по акциям Netflix на импульсе после публикации данных."
+},
     5: { "title": "Мировые транзакции", "date": "22 января 2026", "tickers": ["NYSE:V", "NYSE:PG"], "stats": { "result": "+14.1%", "trades": 3, "duration": "42 мин.", "participants": 290 }, "description": "Visa и P&G.", "videoUrl": "", "screenshot": "" },
     6: { "title": "Чипы и логистика", "date": "23 января 2026", "tickers": ["NASDAQ:INTC"], "stats": { "result": "-2.5%", "trades": 2, "duration": "38 мин.", "participants": 340 }, "description": "Intel и CSX.", "videoUrl": "", "screenshot": "" },
     7: { "title": "Авиаперевозки", "date": "26 января 2026", "tickers": ["NASDAQ:RYAAY"], "stats": { "result": "+7.4%", "trades": 1, "duration": "35 мин.", "participants": 210 }, "description": "Ryanair.", "videoUrl": "", "screenshot": "" },
