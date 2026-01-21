@@ -76,7 +76,9 @@ window.showResults = function(id) {
     const modal = document.getElementById('resultsModal');
     const modalBody = document.getElementById('modalBody');
     const data = webinarResults[id];
+    
     if (!data) return;
+
     let tickerTags = '';
     if (data.tickers) {
         data.tickers.forEach(ticker => {
@@ -84,13 +86,30 @@ window.showResults = function(id) {
         });
     }
 
+    // ЛОГИКА СКРЫТИЯ: если видео нет, переменная будет пустой строкой
+    let videoSectionHTML = '';
+    if (data.videoUrl && data.videoUrl !== "") {
+        videoSectionHTML = `
+            <div class="modal-section">
+                <h3>Видео-запись</h3>
+                <div class="video-container" 
+                     style="position: relative; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid #333; background: #000;">
+                    <iframe src="${data.videoUrl}" 
+                            allow="autoplay; allowfullscreen" 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>`;
+    }
+
     modalBody.innerHTML = `
         <div class="modal-header">
             <h2 class="modal-title">${data.title || 'Результаты вебинара'}</h2>
             <p class="modal-date">${data.date || ''}</p>
             <div class="card-tickers" style="margin-top: 16px;">${tickerTags}</div>
-        </div>    
-
+        </div>
+        
         <div class="modal-section">
             <h3>Статистика вебинара</h3>
             <div class="result-stats">
@@ -100,30 +119,19 @@ window.showResults = function(id) {
                 <div class="stat-item"><div class="stat-label">Участников</div><div class="stat-value">${data.stats.participants}</div></div>
             </div>
         </div>
-
-        <div class="modal-section">
-            <h3>Видео-запись</h3>
-            <div class="video-container" 
-                 style="position: relative; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid #333; background: #000;">
-                <iframe src="${data.videoUrl}" 
-                        allow="autoplay; allowfullscreen" 
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-
-        <div class="modal-section">
+        
+        ${videoSectionHTML} <div class="modal-section">
             <h3>Результаты торговли</h3>
             <img src="${data.screenshot}" onclick="window.toggleFullScreen(this)" 
                  style="width: 100%; border-radius: 12px; cursor: zoom-in; border: 1px solid #333;" title="Кликните для увеличения">
         </div>
-
+        
         <div class="modal-section">
             <h3>Описание</h3>
             <p style="color: #a0a0a0; line-height: 1.6;">${data.description}</p>
         </div>
     `;
+    
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 };
