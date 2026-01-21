@@ -1,25 +1,3 @@
-// 1. КОНФИГУРАЦИЯ FIREBASE (Возьмите эти данные в Project Settings -> General в Firebase Console)
-const firebaseConfig = {
-  apiKey: "ВАШ_API_KEY",
-  authDomain: "ВАШ_PROJECT_ID.firebaseapp.com",
-  projectId: "ВАШ_PROJECT_ID",
-  storageBucket: "ВАШ_PROJECT_ID.appspot.com",
-  messagingSenderId: "ВАШ_SENDER_ID",
-  appId: "ВАШ_APP_ID",
-  measurementId: "G-XXXXXXXXXX" // ОБЯЗАТЕЛЬНО ДЛЯ АНАЛИТИКИ
-};
-
-// 2. ЗАГРУЗКА И ИНИЦИАЛИЗАЦИЯ (через CDN для работы в браузере без VS Code)
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-import { getPerformance } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-performance.js";
-
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const perf = getPerformance(app);
-
-// --- ВАШ ОСНОВНОЙ КОД ---
-
 // 1. Функция регистрации
 window.registerWebinar = function(id) {
     const data = webinarResults[id];
