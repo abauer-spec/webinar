@@ -39,11 +39,11 @@ const webinarResults = {
     },
     "description": "Проанализировали отчет Netflix: взрывной рост подписчиков подтвердил доминирование стриминга. По Johnson & Johnson разобрали влияние судебных издержек на прибыль. Успешно отработали одну сделку по акциям Netflix на импульсе после публикации данных."
 },
-    5: { "title": "Мировые транзакции", "date": "22 января 2026", "tickers": ["NYSE:V", "NYSE:PG"], "stats": { "result": "+14.1%", "trades": 3, "duration": "42 мин.", "participants": 290 }, "description": "Visa и P&G.", "videoUrl": "", "screenshot": "" },
+    5: { "title": "Мировые транзакции", "date": "22 января 2026", "tickers": ["NYSE:PG"], "stats": { "result": "+14.1%", "trades": 3, "duration": "42 мин.", "participants": 290 }, "description": "Visa и P&G.", "videoUrl": "", "screenshot": "" },
     6: { "title": "Чипы и логистика", "date": "23 января 2026", "tickers": ["NASDAQ:INTC"], "stats": { "result": "-2.5%", "trades": 2, "duration": "38 мин.", "participants": 340 }, "description": "Intel и CSX.", "videoUrl": "", "screenshot": "" },
     7: { "title": "Авиаперевозки", "date": "26 января 2026", "tickers": ["NASDAQ:RYAAY"], "stats": { "result": "+7.4%", "trades": 1, "duration": "35 мин.", "participants": 210 }, "description": "Ryanair.", "videoUrl": "", "screenshot": "" },
     8: { "title": "Промышленность и Авто", "date": "27 января 2026", "tickers": ["NYSE:BA", "NYSE:GM"], "stats": { "result": "+11.0%", "trades": 3, "duration": "50 мин.", "participants": 405 }, "description": "Boeing и GM.", "videoUrl": "", "screenshot": "" },
-    9: { "title": "День мега-капитализации", "date": "29 января 2026", "tickers": ["NASDAQ:MSFT", "NASDAQ:TSLA", "NASDAQ:AMZN"], "stats": { "result": "+34.2%", "trades": 8, "duration": "120 мин.", "participants": 1250 }, "description": "Microsoft, Tesla, Amazon.", "videoUrl": "", "screenshot": "" },
+    9: { "title": "День мега-капитализации", "date": "29 января 2026", "tickers": ["NYSE:V", "NASDAQ:MSFT", "NASDAQ:TSLA", "NASDAQ:AMZN"], "stats": { "result": "+34.2%", "trades": 8, "duration": "120 мин.", "participants": 1250 }, "description": "Microsoft, Tesla, Amazon.", "videoUrl": "", "screenshot": "" },
     10: { "title": "Итоги квартала", "date": "30 января 2026", "tickers": ["NASDAQ:AAPL", "NYSE:AXP"], "stats": { "result": "+15.6%", "trades": 4, "duration": "58 мин.", "participants": 890 }, "description": "Apple и Amex.", "videoUrl": "", "screenshot": "" },
     11: { "title": "Потребительский сектор", "date": "3 февраля 2026", "tickers": ["NASDAQ:PEP", "NASDAQ:SBUX"], "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 }, "description": "PepsiCo и Starbucks.", "videoUrl": "", "screenshot": "" },
     12: { "title": "Битва Технологий", "date": "4 февраля 2026", "tickers": ["NASDAQ:GOOGL", "NASDAQ:META"], "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 }, "description": "Google и Meta.", "videoUrl": "", "screenshot": "" },
@@ -66,7 +66,6 @@ window.closeModal = function() {
     if (modal) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
-        // Очистка iframe для остановки видео
         const container = modal.querySelector('.video-container');
         if (container) container.innerHTML = container.innerHTML;
     }
@@ -86,7 +85,6 @@ window.showResults = function(id) {
         });
     }
 
-    // ЛОГИКА СКРЫТИЯ: если видео нет, переменная будет пустой строкой
     let videoSectionHTML = '';
     if (data.videoUrl && data.videoUrl !== "") {
         videoSectionHTML = `
@@ -139,12 +137,10 @@ window.showResults = function(id) {
 // 4. ИСПРАВЛЕННЫЕ СЛУШАТЕЛИ (работают на Firebase/Mobile)
 window.addEventListener('click', function(event) {
     const modal = document.getElementById('resultsModal');
-    // Проверяем, что клик был именно по фону модалки, а не по контенту внутри
     if (event.target.id === 'resultsModal') {
         window.closeModal();
     }
 });
-
 document.addEventListener('keydown', (e) => { 
     if (e.key === 'Escape') window.closeModal(); 
 });
