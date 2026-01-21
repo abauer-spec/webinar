@@ -29,7 +29,7 @@ const webinarResults = {
     "title": "Технологии и медицина: Потребительский спрос",
     "date": "21 января 2026",
     "tickers": ["NASDAQ:NFLX", "NASDAQ:IBKR", "NYSE:JNJ"],
-    "videoUrl": "ССЫЛКА_НА_ВИДЕО", // добавьте ссылку, когда загрузите
+    "videoUrl": "", // добавьте ссылку, когда загрузите
     "screenshot": "img/21-01-netflix.jpg", 
     "stats": { 
         "result": "+6.25%", 
