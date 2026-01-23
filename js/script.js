@@ -46,7 +46,7 @@ const webinarResults = {
         "stats": { "result": "в работе", "trades": 1, "duration": "30 мин.", "participants": 9204 }, 
         "description": "Разбор квартальных результатов Procter & Gamble. Оценка устойчивости бизнеса к инфляции.", 
         "videoUrl": "https://drive.google.com/file/d/1uzIctI38w9NQYHbcfdNkT7U1e5e6B1MH/preview", 
-        "screenshot": "" 
+        "screenshot": "img/22-01-pg.jpg" 
     },
     6: { "title": "Чипы и логистика", "date": "23 января 2026", "tickers": ["NASDAQ:INTC"], "stats": { "result": "-2.5%", "trades": 2, "duration": "38 мин.", "participants": 340 }, "description": "Intel и CSX.", "videoUrl": "", "screenshot": "" },
     7: { "title": "Авиаперевозки", "date": "26 января 2026", "tickers": ["NASDAQ:RYAAY"], "stats": { "result": "+7.4%", "trades": 1, "duration": "35 мин.", "participants": 210 }, "description": "Ryanair.", "videoUrl": "", "screenshot": "" },
