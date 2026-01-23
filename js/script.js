@@ -29,26 +29,29 @@ const webinarResults = {
     "title": "Технологии и медицина: Потребительский спрос",
     "date": "21 января 2026",
     "tickers": ["NASDAQ:NFLX", "NASDAQ:IBKR", "NYSE:JNJ"],
-    "videoUrl": "", // добавьте ссылку, когда загрузите
+    "videoUrl": "", 
     "screenshot": "img/21-01-netflix.jpg", 
-    "stats": { 
-        "result": "+6.25%", 
-        "trades": 1, 
-        "duration": "38 мин.", 
-        "participants": 4002 
-    },
+    "stats": { "result": "+6.25%","trades": 1, "duration": "38 мин.", "participants": 4002 },
     "description": "Проанализировали отчет Netflix: взрывной рост подписчиков подтвердил доминирование стриминга. По Johnson & Johnson разобрали влияние судебных издержек на прибыль. Успешно отработали одну сделку по акциям Netflix на импульсе после публикации данных."
     },
     5: { 
         "title": "Потребительский гигант: Отчет P&G", 
         "date": "22 января 2026", 
         "tickers": ["NYSE:PG"], 
-        "stats": { "result": "в работе", "trades": 1, "duration": "30 мин.", "participants": 9204 }, 
+        "stats": { "result": "-8%", "trades": 1, "duration": "30 мин.", "participants": 9204 }, 
         "description": "Разбор квартальных результатов Procter & Gamble. Оценка устойчивости бизнеса к инфляции.", 
         "videoUrl": "https://drive.google.com/file/d/1uzIctI38w9NQYHbcfdNkT7U1e5e6B1MH/preview", 
-        "screenshot": "img/22-01-pg.jpg" 
+        "screenshot": "img/23-01-intel-pg.jpg" 
     },
-    6: { "title": "Чипы и логистика", "date": "23 января 2026", "tickers": ["NASDAQ:INTC"], "stats": { "result": "-2.5%", "trades": 2, "duration": "38 мин.", "participants": 340 }, "description": "Intel и CSX.", "videoUrl": "", "screenshot": "" },
+    6: { 
+    "title": "Чипы и Потребительский гигант", 
+    "date": "23 января 2026", 
+    "tickers": ["NASDAQ:INTC", "NYSE:PG"], 
+    "stats": { "result": "+8.8%", "trades": 2, "duration": "27 мин.", "participants": 10843 }, 
+    "description": "Стратегия хеджирования в действии: объединили волатильный технологический сектор (Intel) с защитным активом (P&G). За счет перекрытия позиций минимизировали риски вчерашней сделки и закрыли сессию с отличным общим профитом.", 
+    "videoUrl": "https://drive.google.com/file/d/1_d-Nxw1GEAwPtoA3LfalMlAM8tOgvlHG/preview", 
+    "screenshot": "img/23-01-intel-pg.jpg" 
+    },
     7: { "title": "Авиаперевозки", "date": "26 января 2026", "tickers": ["NASDAQ:RYAAY"], "stats": { "result": "+7.4%", "trades": 1, "duration": "35 мин.", "participants": 210 }, "description": "Ryanair.", "videoUrl": "", "screenshot": "" },
     8: { "title": "Промышленность и Авто", "date": "27 января 2026", "tickers": ["NYSE:BA", "NYSE:GM"], "stats": { "result": "+11.0%", "trades": 3, "duration": "50 мин.", "participants": 405 }, "description": "Boeing и GM.", "videoUrl": "", "screenshot": "" },
     9: { "title": "День мега-капитализации", "date": "29 января 2026", "tickers": ["NYSE:V", "NASDAQ:MSFT", "NASDAQ:TSLA", "NASDAQ:AMZN"], "stats": { "result": "+34.2%", "trades": 8, "duration": "120 мин.", "participants": 1250 }, "description": "Microsoft, Tesla, Amazon.", "videoUrl": "", "screenshot": "" },
