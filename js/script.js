@@ -40,11 +40,11 @@ const webinarResults = {
     "description": "Проанализировали отчет Netflix: взрывной рост подписчиков подтвердил доминирование стриминга. По Johnson & Johnson разобрали влияние судебных издержек на прибыль. Успешно отработали одну сделку по акциям Netflix на импульсе после публикации данных."
     },
     5: { 
-        "title": "Мировые транзакции", 
+        "title": "Потребительский гигант: Отчет P&G", 
         "date": "22 января 2026", 
         "tickers": ["NYSE:PG"], 
-        "stats": { "result": "+14.1%", "trades": 1, "duration": "30 мин.", "participants": 9204 }, 
-        "description": "P&G.", 
+        "stats": { "result": "в работе", "trades": 1, "duration": "30 мин.", "participants": 9204 }, 
+        "description": "Разбор квартальных результатов Procter & Gamble. Оценка устойчивости бизнеса к инфляции.", 
         "videoUrl": "https://drive.google.com/file/d/1uzIctI38w9NQYHbcfdNkT7U1e5e6B1MH/preview", 
         "screenshot": "" 
     },
