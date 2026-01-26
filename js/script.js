@@ -52,7 +52,14 @@ const webinarResults = {
     "videoUrl": "https://drive.google.com/file/d/1_d-Nxw1GEAwPtoA3LfalMlAM8tOgvlHG/preview", 
     "screenshot": "img/23-01-intel-pg.jpg" 
     },
-    7: { "title": "Авиаперевозки", "date": "26 января 2026", "tickers": ["NASDAQ:RYAAY"], "stats": { "result": "+7.4%", "trades": 1, "duration": "35 мин.", "participants": 210 }, "description": "Ryanair.", "videoUrl": "", "screenshot": "" },
+    7: { 
+        "title": "Авиаперевозки", 
+        "date": "26 января 2026", 
+        "tickers": ["NASDAQ:RYAAY"], 
+        "stats": { "result": "+7.4%", "trades": 1, "duration": "35 мин.", "participants": 210 }, 
+        "description": "Анализ крупнейшего лоукостера Европы. Использовали волатильность авиасектора после квартального отчета Ryanair. Сделка закрыта с четким соблюдением риск-менеджмента и профитом +5,82%.", 
+        "videoUrl": "", 
+        "screenshot": "img/26-01-ryaay.jpg" },
     8: { "title": "Промышленность и Авто", "date": "27 января 2026", "tickers": ["NYSE:BA", "NYSE:GM"], "stats": { "result": "+11.0%", "trades": 3, "duration": "50 мин.", "participants": 405 }, "description": "Boeing и GM.", "videoUrl": "", "screenshot": "" },
     9: { "title": "День мега-капитализации", "date": "29 января 2026", "tickers": ["NYSE:V", "NASDAQ:MSFT", "NASDAQ:TSLA", "NASDAQ:AMZN"], "stats": { "result": "+34.2%", "trades": 8, "duration": "120 мин.", "participants": 1250 }, "description": "Microsoft, Tesla, Amazon.", "videoUrl": "", "screenshot": "" },
     10: { "title": "Итоги квартала", "date": "30 января 2026", "tickers": ["NASDAQ:AAPL", "NYSE:AXP"], "stats": { "result": "+15.6%", "trades": 4, "duration": "58 мин.", "participants": 890 }, "description": "Apple и Amex.", "videoUrl": "", "screenshot": "" },
