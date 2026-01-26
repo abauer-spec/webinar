@@ -21,24 +21,24 @@ const webinarResults = {
         "tickers": ["NYSE:BAC", "NYSE:WFC", "NYSE:C"],
         "videoUrl": "https://drive.google.com/file/d/1c1v_biubdWWrlWeb28q9H6UExjmVxnr-/preview",
         "screenshot": "img/14-01-bac-wfc-c.jpg",
-        "stats": { "result": "+7.7%", "trades": 3, "duration": "34 мин.", "participants": 2203 },
+        "stats": { "result": "+8.23%", "trades": 3, "duration": "34 мин.", "participants": 2203 },
         "description": "В ходе вебинара детально изучили финансовые показатели BAC, WFC и Citigroup в условиях текущих процентных ставок. На практике разобрали 3 успешных сделки с общей доходностью 7.7% за сессию."
     },
     3: { "title": "Инвестиционные гиганты", "date": "15 января 2026", "tickers": ["NYSE:GS", "NYSE:MS"], "stats": { "result": "+9.8%", "trades": 4, "duration": "60 мин.", "participants": 312 }, "description": "Разбор Goldman Sachs и Morgan Stanley.", "videoUrl": "", "screenshot": "" },
     4: {
-    "title": "Технологии и медицина: Потребительский спрос",
-    "date": "21 января 2026",
-    "tickers": ["NASDAQ:NFLX", "NASDAQ:IBKR", "NYSE:JNJ"],
-    "videoUrl": "", 
-    "screenshot": "img/21-01-netflix.jpg", 
-    "stats": { "result": "+6.25%","trades": 1, "duration": "38 мин.", "participants": 4002 },
-    "description": "Проанализировали отчет Netflix: взрывной рост подписчиков подтвердил доминирование стриминга. По Johnson & Johnson разобрали влияние судебных издержек на прибыль. Успешно отработали одну сделку по акциям Netflix на импульсе после публикации данных."
+        "title": "Технологии и медицина: Потребительский спрос",
+        "date": "21 января 2026",
+        "tickers": ["NASDAQ:NFLX", "NASDAQ:IBKR", "NYSE:JNJ"],
+        "videoUrl": "", 
+        "screenshot": "img/21-01-netflix.jpg", 
+        "stats": { "result": "+7.37%","trades": 1, "duration": "38 мин.", "participants": 4002 },
+        "description": "Проанализировали отчет Netflix: взрывной рост подписчиков подтвердил доминирование стриминга. По Johnson & Johnson разобрали влияние судебных издержек на прибыль. Успешно отработали одну сделку по акциям Netflix на импульсе после публикации данных."
     },
     5: { 
         "title": "Потребительский гигант: Отчет P&G", 
         "date": "22 января 2026", 
         "tickers": ["NYSE:PG"], 
-        "stats": { "result": "-8%", "trades": 1, "duration": "30 мин.", "participants": 9204 }, 
+        "stats": { "result": "+10,24%", "trades": 1, "duration": "30 мин.", "participants": 9204 }, 
         "description": "Разбор квартальных результатов Procter & Gamble. Оценка устойчивости бизнеса к инфляции.", 
         "videoUrl": "https://drive.google.com/file/d/1uzIctI38w9NQYHbcfdNkT7U1e5e6B1MH/preview", 
         "screenshot": "img/23-01-intel-pg.jpg" 
@@ -47,7 +47,7 @@ const webinarResults = {
     "title": "Чипы и Потребительский гигант", 
     "date": "23 января 2026", 
     "tickers": ["NASDAQ:INTC", "NYSE:PG"], 
-    "stats": { "result": "+8.8%", "trades": 2, "duration": "27 мин.", "participants": 10843 }, 
+    "stats": { "result": "+10.24%", "trades": 2, "duration": "27 мин.", "participants": 10843 }, 
     "description": "Стратегия хеджирования в действии: объединили волатильный технологический сектор (Intel) с защитным активом (P&G). За счет перекрытия позиций минимизировали риски вчерашней сделки и закрыли сессию с отличным общим профитом.", 
     "videoUrl": "https://drive.google.com/file/d/1_d-Nxw1GEAwPtoA3LfalMlAM8tOgvlHG/preview", 
     "screenshot": "img/23-01-intel-pg.jpg" 
