@@ -56,7 +56,7 @@ const webinarResults = {
         "title": "Авиаперевозки", 
         "date": "26 января 2026", 
         "tickers": ["NASDAQ:RYAAY"], 
-        "stats": { "result": "+5.82%", "trades": 1, "duration": "30 мин.", "participants": 7210 }, 
+        "stats": { "result": "+5.82%", "trades": 1, "duration": "30 мин.", "participants": 11210 }, 
         "description": "Анализ крупнейшего лоукостера Европы. Использовали волатильность авиасектора после квартального отчета Ryanair. Сделка закрыта с четким соблюдением риск-менеджмента и профитом +5,82%.", 
         "videoUrl": "https://drive.google.com/file/d/1Xor1cub2iw5x2ie4UgnHnua5Nyl4N_RY/preview", 
         "screenshot": "img/26-01-ryaay.jpg" },
