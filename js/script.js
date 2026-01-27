@@ -65,7 +65,7 @@ const webinarResults = {
         "date": "27 января 2026", 
         "tickers": ["NYSE:BA", "NYSE:NOC", "NYSE:GM"], 
         "stats": { "result": "+15.5%", "trades": 3, "duration": "31 мин.", "participants": 18405 }, 
-        "description": "Boeing и GM.", 
+        "description": "Масштабный разбор авиапрома и ВПК. Проанализировали отчетность Boeing и темпы General Motors. Благодаря точному входу в оборонный сектор (NOC) и отскоку автопроизводителей, закрыли сессию с мощным результатом +15,5%.", 
         "videoUrl": "", 
         "screenshot": "img/27-01-ba-gm-noc.jpg" 
     },
