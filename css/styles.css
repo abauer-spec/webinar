@@ -282,6 +282,7 @@ body {
 
 .webinar-card:hover {
     border-color: #8135c0;
+    box-shadow: 0px 0px 20px 1px rgb(223 0 255 / 10%);
 }
 
 .card-header {
