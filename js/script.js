@@ -66,7 +66,7 @@ const webinarResults = {
         "tickers": ["NYSE:BA", "NYSE:NOC", "NYSE:GM"], 
         "stats": { "result": "+15.5%", "trades": 3, "duration": "31 мин.", "participants": 18405 }, 
         "description": "Масштабный разбор авиапрома и ВПК. Проанализировали отчетность Boeing и темпы General Motors. Благодаря точному входу в оборонный сектор (NOC) и отскоку автопроизводителей, закрыли сессию с мощным результатом +15,5%.", 
-        "videoUrl": "", 
+        "videoUrl": "https://drive.google.com/file/d/1R9Cnc79d-NEUlJa9dBWtHHsAuFSb7zaJ/preview", 
         "screenshot": "img/27-01-ba-gm-noc.jpg" 
     },
     9: { "title": "День мега-капитализации", "date": "29 января 2026", "tickers": ["NYSE:V", "NASDAQ:MSFT", "NASDAQ:TSLA", "NASDAQ:AMZN"], "stats": { "result": "+34.2%", "trades": 8, "duration": "120 мин.", "participants": 1250 }, "description": "Microsoft, Tesla, Amazon.", "videoUrl": "", "screenshot": "" },
