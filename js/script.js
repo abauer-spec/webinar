@@ -1,9 +1,3 @@
-// 1. Функция регистрации
-
-window.registerWebinar = function(id) {
-    alert(`Спасибо за интерес! Ссылка на вебинар скоро будет добавлена.`);
-};
-
 // 2. Данные вебинаров (твои актуальные данные)
 const webinarResults = {
     1: {
@@ -75,7 +69,7 @@ const webinarResults = {
         "tickers": ["NASDAQ:MSFT", "NASDAQ:TSLA", "NYSE:LMT", "NASDAQ:META"], 
         "stats": { "result": "+130.09%", "trades": 4, "duration": "28 мин.", "participants": 201253 }, 
         "description": "Настоящая битва гигантов! Всего за 28 минут пролетели по самым ликвидным бумагам рынка: от технологического ралли MSFT и META до волатильных движений Tesla. Четыре точных входа, более 200 тысяч участников в моменте и феноменальный результат. Этот день доказал: мега-капитализация дает мега-возможности, если знать, где ловить импульс.", 
-        "videoUrl": "", 
+        "videoUrl": "https://drive.google.com/file/d/1tz3ofcWUwdNA8EdlBgm1JwuZ5qBEVzXN/preview", 
         "screenshot": "img/29-01-meta-msft-lmt-tsla.jpg" 
     },
     10: { "title": "Итоги квартала", "date": "30 января 2026", "tickers": ["NASDAQ:AAPL", "NYSE:AXP"], "stats": { "result": "+15.6%", "trades": 4, "duration": "58 мин.", "participants": 890 }, "description": "Apple и Amex.", "videoUrl": "", "screenshot": "" },
