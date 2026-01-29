@@ -69,7 +69,15 @@ const webinarResults = {
         "videoUrl": "https://drive.google.com/file/d/1R9Cnc79d-NEUlJa9dBWtHHsAuFSb7zaJ/preview", 
         "screenshot": "img/27-01-ba-gm-noc.jpg" 
     },
-    9: { "title": "День мега-капитализации", "date": "29 января 2026", "tickers": ["NYSE:V", "NASDAQ:MSFT", "NASDAQ:TSLA", "NASDAQ:AMZN"], "stats": { "result": "+34.2%", "trades": 8, "duration": "120 мин.", "participants": 1250 }, "description": "Microsoft, Tesla, Amazon.", "videoUrl": "", "screenshot": "" },
+    9: { 
+        "title": "День мега-капитализации", 
+        "date": "29 января 2026", 
+        "tickers": ["NASDAQ:MSFT", "NASDAQ:TSLA", "NYSE:LMT", "NASDAQ:META"], 
+        "stats": { "result": "+130.09%", "trades": 4, "duration": "28 мин.", "participants": 201253 }, 
+        "description": "Настоящая битва гигантов! Всего за 28 минут пролетели по самым ликвидным бумагам рынка: от технологического ралли MSFT и META до волатильных движений Tesla. Четыре точных входа, более 200 тысяч участников в моменте и феноменальный результат. Этот день доказал: мега-капитализация дает мега-возможности, если знать, где ловить импульс.", 
+        "videoUrl": "", 
+        "screenshot": "img/29-01-meta-msft-lmt-tsla.jpg" 
+    },
     10: { "title": "Итоги квартала", "date": "30 января 2026", "tickers": ["NASDAQ:AAPL", "NYSE:AXP"], "stats": { "result": "+15.6%", "trades": 4, "duration": "58 мин.", "participants": 890 }, "description": "Apple и Amex.", "videoUrl": "", "screenshot": "" },
     11: { "title": "Потребительский сектор", "date": "3 февраля 2026", "tickers": ["NASDAQ:PEP", "NASDAQ:SBUX"], "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 }, "description": "PepsiCo и Starbucks.", "videoUrl": "", "screenshot": "" },
     12: { "title": "Битва Технологий", "date": "4 февраля 2026", "tickers": ["NASDAQ:GOOGL", "NASDAQ:META"], "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 }, "description": "Google и Meta.", "videoUrl": "", "screenshot": "" },
@@ -186,7 +194,7 @@ function updateTimer() {
             const now = new Date();
             // Установка даты: 14 января 2026, 17:00 по Москве (UTC+3)
             // Если нужно поменять дату, меняй строку ниже в формате ГГГГ-ММ-ДДTЧЧ:ММ:СС+03:00
-            const targetDate = "2026-01-29T17:00:00+03:00";
+            const targetDate = "2026-01-30T17:00:00+03:00";
             const target = new Date(targetDate);
             const diff = target - now;
             if (diff <= 0) {
