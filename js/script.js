@@ -72,7 +72,15 @@ const webinarResults = {
         "videoUrl": "https://drive.google.com/file/d/1tz3ofcWUwdNA8EdlBgm1JwuZ5qBEVzXN/preview", 
         "screenshot": "img/29-01-meta-msft-lmt-tsla.jpg" 
     },
-    10: { "title": "Итоги квартала", "date": "30 января 2026", "tickers": ["NASDAQ:AAPL", "NYSE:AXP"], "stats": { "result": "+15.6%", "trades": 4, "duration": "58 мин.", "participants": 890 }, "description": "Apple и Amex.", "videoUrl": "", "screenshot": "" },
+    10: { 
+        "title": "Итоги квартала: Apple и Chevron", 
+        "date": "30 января 2026", 
+        "tickers": ["NASDAQ:AAPL", "NYSE:cvx"], 
+        "stats": { "result": "+1.7%", "trades": 2, "duration": "28 мин.", "participants": 107890 }, 
+        "description": "Фокус на лидерах рынка: Apple и Chevron. Успешно закрыли позицию по AAPL, зафиксировав профит $170 (+1.7% к депозиту). Сделка по Chevron (CVX) остается открытой — продолжаем удерживать позицию согласно торговому плану в ожидании Take Profit.", 
+        "videoUrl": "", 
+        "screenshot": "img/30-01-apple-chevron.jpg" 
+    },
     11: { "title": "Потребительский сектор", "date": "3 февраля 2026", "tickers": ["NASDAQ:PEP", "NASDAQ:SBUX"], "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 }, "description": "PepsiCo и Starbucks.", "videoUrl": "", "screenshot": "" },
     12: { "title": "Битва Технологий", "date": "4 февраля 2026", "tickers": ["NASDAQ:GOOGL", "NASDAQ:META"], "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 }, "description": "Google и Meta.", "videoUrl": "", "screenshot": "" },
     13: { "title": "Дивидендные аристократы", "date": "5 февраля 2026", "tickers": ["NYSE:PM"], "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 }, "description": "Philip Morris.", "videoUrl": "", "screenshot": "" }
