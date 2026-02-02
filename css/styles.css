@@ -167,7 +167,7 @@ body {
   color: #000;
   z-index: 1;
   outline: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-primary::after {
@@ -185,11 +185,12 @@ body {
 }
 
 .btn-primary:hover {
-  color: #fff;
+  color: #000000;
+  transform: scale(1.10);
 }
 
 .btn-primary:hover::after {
-  background-color: var(--accent-blue);
+  background-color: #9ab5ff;
 }
 
 /* .btn-primary:hover {
