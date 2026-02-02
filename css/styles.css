@@ -302,7 +302,7 @@ body {
 }
 
 .card-badge {
-    background-color: #6c435c;
+    /* background-color: #6c435c; */
     color: white;
     padding: 4px 12px;
     border-radius: 4px;
