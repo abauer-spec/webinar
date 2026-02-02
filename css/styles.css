@@ -259,7 +259,6 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    opacity: 0;
     transform: translateY(20px);
     will-change: transform, opacity;
     transition: 
