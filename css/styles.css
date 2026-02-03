@@ -770,6 +770,31 @@ button:disabled:hover {
             margin-top: 40px;
         }
 
+.course-card {
+    border: 1px solid #6c435c;
+    border-radius: 8px;
+    padding: 2rem;
+    background: radial-gradient(circle 530px at 0% 0%, #231639, #0c0d0d);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out, border-color 0.3s ease;
+}
+
+.course-card:hover {
+    border-color: #8135c0;
+    box-shadow: 0px 0px 20px 1px rgb(223 0 255 / 10%);
+}
+
+.course-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.course-description {
+  font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
         .course-item {
             display: flex;
             width: 100%;
