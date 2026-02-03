@@ -357,6 +357,7 @@ async function initCourses() {
 
     try {
         const response = await fetch('courses.json');
+        if (!response.ok) throw new Error('Файл courses.json не найден');
         const data = await response.json();
         
         container.innerHTML = Object.keys(data).map(key => {
@@ -379,5 +380,6 @@ async function initCourses() {
         }).join('');
     } catch (err) {
         console.error("Ошибка загрузки курсов:", err);
+        container.innerHTML = `<p style="text-align: center; color: #666;">Ошибка: ${err.message}</p>`;
     }
 }
