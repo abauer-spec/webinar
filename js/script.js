@@ -166,37 +166,3 @@ function updateTimer() {
 
 setInterval(updateTimer, 1000);
 updateTimer();
-
-// 6. Новый код для загрузки курсов
-async function initCourses() {
-    const container = document.getElementById('courses-grid');
-    if (!container) return;
-
-    try {
-        const response = await fetch('courses.json');
-        if (!response.ok) throw new Error('Файл courses.json не найден');
-        const data = await response.json();
-        
-        container.innerHTML = Object.keys(data).map(key => {
-            const item = data[key];
-            return `
-                <div class="course-item">
-                    <div class="course-video-part">
-                        ${item.videoUrl 
-                            ? `<iframe src="${item.videoUrl}" allowfullscreen></iframe>`
-                            : `<div class="screenshot-placeholder" style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666;">Видео скоро появится</div>`
-                        }
-                    </div>
-                    <div class="course-info-part">
-                        <div style="color: #5d81ff; font-size: 12px; font-weight: 800; margin-bottom: 8px; text-transform: uppercase;">Урок №${key}</div>
-                        <h3 class="course-item-title">${item.title}</h3>
-                        <p class="course-item-desc">${item.description}</p>
-                    </div>
-                </div>
-            `;
-        }).join('');
-    } catch (err) {
-        console.error("Ошибка загрузки курсов:", err);
-        container.innerHTML = `<p style="text-align: center; color: #666;">Ошибка: ${err.message}</p>`;
-    }
-}
