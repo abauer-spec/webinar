@@ -761,3 +761,70 @@ button:disabled:hover {
   color: rgb(255 255 255);
   border: 1px solid #dddddd;
 }
+
+/* СТРАНИЦА ОБУЧАЮЩИХ КУРСОВ */
+.course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .course-item {
+            display: flex;
+            width: 100%;
+            background: radial-gradient(circle 530px at 0% 0%, #231639, #0c0d0d);
+            border: 1px solid #6c435c;
+            border-radius: 12px;
+            overflow: hidden;
+            min-height: 250px;
+            transition: border-color 0.3s ease;
+        }
+
+        .course-item:hover {
+            border-color: #8135c0;
+        }
+
+        .course-video-part {
+            flex: 0 0 35%; /* Соотношение 35 */
+            position: relative;
+            background: #000;
+        }
+
+        .course-video-part iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: none;
+        }
+
+        .course-info-part {
+            flex: 0 0 65%; /* Соотношение 65 */
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .course-item-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .course-item-desc {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Адаптивность для мобилок */
+        @media (max-width: 992px) {
+            .course-item { flex-direction: column; }
+            .course-video-part { 
+                flex: 0 0 auto; 
+                width: 100%; 
+                aspect-ratio: 16/9; 
+            }
+            .course-info-part { flex: 0 0 auto; padding: 20px; }
+        }
