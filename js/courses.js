@@ -1,39 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
     const coursesGrid = document.getElementById('courses-grid');
 
-    // Функция для загрузки данных
+    // 1. Загружаем данные из JSON
     async function loadCourses() {
         try {
-            // Путь к вашему JSON файлу
             const response = await fetch('courses.json'); 
-            if (!response.ok) throw new Error('Ошибка загрузки данных');
+            if (!response.ok) throw new Error('Ошибка при получении JSON');
             
             const coursesData = await response.json();
             renderCourses(coursesData);
         } catch (error) {
             console.error('Ошибка:', error);
-            coursesGrid.innerHTML = `<p style="text-align: center; color: red;">Не удалось загрузить материалы. Попробуйте позже.</p>`;
+            coursesGrid.innerHTML = `
+                <p style="text-align: center; color: #ff4c4c; padding: 40px;">
+                    Ошибка загрузки данных. Пожалуйста, проверьте соединение.
+                </p>`;
         }
     }
 
-    // Функция отрисовки карточек
+    // 2. Логика отрисовки
     function renderCourses(data) {
-        // Очищаем контейнер от текста "Загрузка..."
+        // Очищаем контейнер от заглушки "Загрузка..."
         coursesGrid.innerHTML = '';
 
-        // Превращаем объект в массив и перебираем его
-        Object.values(data).forEach(course => {
-            const card = document.createElement('div');
-            card.className = 'course-card'; // Убедитесь, что этот класс есть в вашем CSS
+        // Превращаем объект в массив (чтобы использовать forEach)
+        const coursesArray = Object.values(data);
 
-            // Проверяем наличие видео. Если ссылки нет, выводим заглушку или сообщение
-            const videoContent = course.videoUrl 
-                ? `<iframe src="${course.videoUrl}" allow="autoplay" allowfullscreen></iframe>`
-                : `<div class="video-placeholder">Видео скоро появится</div>`;
+        // Проверяем, есть ли вообще хоть одно видео в списке
+        const hasAnyVideo = coursesArray.some(course => course.videoUrl && course.videoUrl.trim() !== "");
+
+        if (!hasAnyVideo) {
+            coursesGrid.innerHTML = `
+                <p style="text-align: center; padding: 50px; color: #888;">
+                    На данный момент доступных видеоуроков нет.
+                </p>`;
+            return;
+        }
+
+        // Перебираем курсы
+        coursesArray.forEach(course => {
+            // ЖЕСТКАЯ ПРОВЕРКА: Если videoUrl пустой, null или только пробелы — СКИПАЕМ
+            if (!course.videoUrl || course.videoUrl.trim() === "") {
+                return; // Этот return просто переходит к следующему элементу массива
+            }
+
+            // Если видео есть, создаем карточку
+            const card = document.createElement('div');
+            card.className = 'course-card';
 
             card.innerHTML = `
                 <div class="video-container">
-                    ${videoContent}
+                    <iframe 
+                        src="${course.videoUrl}" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
                 <div class="course-info">
                     <h3 class="course-title">${course.title}</h3>
