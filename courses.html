@@ -8,74 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Специфичные стили для страницы обучения */
-        .course-list {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-            margin-top: 40px;
-        }
-
-        .course-item {
-            display: flex;
-            width: 100%;
-            background: radial-gradient(circle 530px at 0% 0%, #231639, #0c0d0d);
-            border: 1px solid #6c435c;
-            border-radius: 12px;
-            overflow: hidden;
-            min-height: 250px;
-            transition: border-color 0.3s ease;
-        }
-
-        .course-item:hover {
-            border-color: #8135c0;
-        }
-
-        .course-video-part {
-            flex: 0 0 35%; /* Соотношение 35 */
-            position: relative;
-            background: #000;
-        }
-
-        .course-video-part iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            border: none;
-        }
-
-        .course-info-part {
-            flex: 0 0 65%; /* Соотношение 65 */
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .course-item-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 16px;
-        }
-
-        .course-item-desc {
-            color: var(--text-secondary);
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* Адаптивность для мобилок */
-        @media (max-width: 992px) {
-            .course-item { flex-direction: column; }
-            .course-video-part { 
-                flex: 0 0 auto; 
-                width: 100%; 
-                aspect-ratio: 16/9; 
-            }
-            .course-info-part { flex: 0 0 auto; padding: 20px; }
-        }
-    </style>
 </head>
 <body class="section-alt">
     
@@ -97,30 +29,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        async function initCourses() {
-            try {
-                const response = await fetch('courses.json');
-                const data = await response.json();
-                const container = document.getElementById('courses-grid');
-                
-                container.innerHTML = data.map(item => `
-                    <div class="course-item">
-                        <div class="course-video-part">
-                            <iframe src="${item.videoUrl}" allowfullscreen></iframe>
-                        </div>
-                        <div class="course-info-part">
-                            <h3 class="course-item-title">${item.title}</h3>
-                            <p class="course-item-desc">${item.description}</p>
-                        </div>
-                    </div>
-                `).join('');
-            } catch (err) {
-                console.error("Ошибка загрузки курсов:", err);
-            }
-        }
-        document.addEventListener('DOMContentLoaded', initCourses);
-    </script>
+<script src="js/script.js"></script>
 </body>
 </html>
