@@ -39,6 +39,7 @@ body {
 }
 
 .btn-l {
+  opacity: 0.5;
     position: fixed;
     top: 20px;
     right: 20px;
@@ -54,7 +55,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease;
+    transition: all 2s ease;
+}
+
+.btn-l:hover {
+  opacity: 1;
 }
 
 .img-l {
