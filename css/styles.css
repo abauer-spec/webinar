@@ -38,6 +38,30 @@ body {
     "SHRP" 0;
 }
 
+.btn-l {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: rgb(255 255 255 / 13%);
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.img-l {
+    width: 100%;
+    height: auto;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
