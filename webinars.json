@@ -99,13 +99,13 @@
     "screenshot": ""
   },
   "12": {
-    "title": "Битва Технологий",
-    "date": "4 февраля 2026",
-    "tickers": ["NASDAQ:GOOGL", "NASDAQ:META"],
-    "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 },
-    "description": "Google и Meta.",
-    "videoUrl": "",
-    "screenshot": ""
+    "title": "Торговля на квартальных отчётах: Технологии и Биофарма", 
+    "date": "4 февраля 2026", 
+    "tickers": ["NASDAQ:AMD", "NASDAQ:AMGN", "NASDAQ:EA", "NYSE:ABBV", "NASDAQ:FOX"], 
+    "stats": { "result": "в работе", "trades": 3, "duration": "35 мин.", "participants": 115402 }, 
+    "description": "Разбор мощного пула отчетов. Основной фокус на AMD: отработали импульс после публикации данных по рынку чипов. Также проанализировали AbbVie и Amgen, оценив устойчивость биофармацевтического сектора. Часть позиций зафиксирована, остальные сопровождаем в реальном времени.", 
+    "videoUrl": "", 
+    "screenshot": "img/04-02-chevron-abbv-amd.jpg"
   },
   "13": {
     "title": "Дивидендные аристократы",
