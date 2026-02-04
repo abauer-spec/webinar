@@ -90,24 +90,15 @@
     "screenshot": "img/30-01-apple-chevron.jpg"
   },
   "11": {
-    "title": "Потребительский сектор",
-    "date": "3 февраля 2026",
-    "tickers": ["NASDAQ:PEP", "NASDAQ:SBUX"],
-    "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 },
-    "description": "PepsiCo и Starbucks.",
-    "videoUrl": "",
-    "screenshot": ""
-  },
-  "12": {
     "title": "Торговля на квартальных отчётах: Технологии и Биофарма", 
     "date": "4 февраля 2026", 
-    "tickers": ["NASDAQ:AMD", "NASDAQ:AMGN", "NASDAQ:EA", "NYSE:ABBV", "NASDAQ:FOX"], 
-    "stats": { "result": "в работе", "trades": 3, "duration": "35 мин.", "participants": 115402 }, 
+    "tickers": ["NASDAQ:AMD", "NYSE:ABBV", "NYSE:cvx"], 
+    "stats": { "result": "+39.69%", "trades": 3, "duration": "30 мин.", "participants": 115402 }, 
     "description": "Разбор мощного пула отчетов. Основной фокус на AMD: отработали импульс после публикации данных по рынку чипов. Также проанализировали AbbVie и Amgen, оценив устойчивость биофармацевтического сектора. Часть позиций зафиксирована, остальные сопровождаем в реальном времени.", 
     "videoUrl": "", 
     "screenshot": "img/04-02-chevron-abbv-amd.jpg"
   },
-  "13": {
+  "12": {
     "title": "Дивидендные аристократы",
     "date": "5 февраля 2026",
     "tickers": ["NYSE:PM"],
