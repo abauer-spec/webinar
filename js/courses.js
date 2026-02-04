@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.innerHTML = `
                 <div class="course-info">
-                    <h3 class="course-title" target="_blank" rel="noopener noreferrer">${course.title}</h3>
+                    <h3 class="course-title">${course.title}</h3>
                     <p class="course-description">${course.description}</p>
                 </div>
-                <a href="${course.videoUrl}" class="btn-watch">Смотреть запись</a>
+                <a href="${course.videoUrl}" class="btn-watch" target="_blank" rel="noopener noreferrer">Смотреть запись</a>
             `;
             
             coursesGrid.appendChild(card);
