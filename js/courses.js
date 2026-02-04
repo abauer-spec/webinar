@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="video-container">
                     <iframe 
                         src="${course.videoUrl}" 
+                        loading="lazy"
                         frameborder="0" 
                         allow="autoplay; fullscreen" 
                         allowfullscreen>
