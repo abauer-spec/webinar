@@ -827,6 +827,8 @@ button:disabled:hover {
   box-sizing: border-box;
     text-decoration: none;
     display: inline-block;
+  color: white;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out, border-color 0.3s ease;
 }
 
 .btn-watch:hover {
@@ -861,8 +863,8 @@ button:disabled:hover {
             border-color: #8135c0;
         }
 
-        .course-video-part {
-            flex: 0 0 35%; /* Соотношение 35 */
+        /* .course-video-part {
+            flex: 0 0 35%; 
             position: relative;
             background: #000;
         }
@@ -874,12 +876,12 @@ button:disabled:hover {
         }
 
         .course-info-part {
-            flex: 0 0 65%; /* Соотношение 65 */
+            flex: 0 0 65%; 
             padding: 30px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-        }
+        } */
 
         .course-item-title {
             font-size: 24px;
