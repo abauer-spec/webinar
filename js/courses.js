@@ -49,19 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'course-card';
 
             card.innerHTML = `
-                <div class="video-container">
-                    <iframe 
-                        src="${course.videoUrl}" 
-                        loading="lazy"
-                        frameborder="0" 
-                        allow="autoplay; fullscreen" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
                 <div class="course-info">
-                    <h3 class="course-title">${course.title}</h3>
+                    <h3 class="course-title" target="_blank" rel="noopener noreferrer">${course.title}</h3>
                     <p class="course-description">${course.description}</p>
                 </div>
+                <a href="${course.videoUrl}" class="btn-watch">Смотреть запись</a>
             `;
             
             coursesGrid.appendChild(card);
