@@ -904,11 +904,6 @@ button:disabled:hover {
         /* Адаптивность для мобилок */
         @media (max-width: 992px) {
             .course-item { flex-direction: column; }
-            .course-video-part { 
-                flex: 0 0 auto; 
-                width: 100%; 
-                aspect-ratio: 16/9; 
-            }
             .course-info-part { flex: 0 0 auto; padding: 20px; }
-            .course-card { flex-direction: column; }
+            .course-card { display: flex !important; flex-direction: column !important; }
         }
