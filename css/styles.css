@@ -910,4 +910,5 @@ button:disabled:hover {
                 aspect-ratio: 16/9; 
             }
             .course-info-part { flex: 0 0 auto; padding: 20px; }
+            .course-card { flex-direction: column; }
         }
