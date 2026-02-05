@@ -99,12 +99,12 @@
     "screenshot": "img/04-02-chevron-abbv-amd.jpg"
   },
   "12": {
-    "title": "Дивидендные аристократы",
+    "title": "Дивидендные аристократы: Google",
     "date": "5 февраля 2026",
-    "tickers": ["NYSE:PM"],
-    "stats": { "result": "0.0%", "trades": 0, "duration": "0 мин.", "participants": 0 },
-    "description": "Philip Morris.",
+    "tickers": ["NASDAQ:GOOG"],
+    "stats": { "result": "+30.96%", "trades": 1, "duration": "29 мин.", "participants": 256806 },
+    "description": "Масштабная сессия с участием более четверти миллиона человек! Сосредоточились на Alphabet (Google) в разгар волатильности техсектора. Всего за 29 минут поймали мощное движение, которое принесло феноменальный результат +30.96%. Разбор логики входа в сделку и фиксация прибыли в прямом эфире.",
     "videoUrl": "",
-    "screenshot": ""
+    "screenshot": "img/05-02-googl.jpg"
   }
 }
