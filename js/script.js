@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateTimer() {
     const now = new Date();
     // ЗАДАТЬ ВРЕМЯ И ДАТУ
-    const targetDate = "2026-02-18T17:00:00+03:00";
+    const targetDate = "2026-02-20T17:00:00+03:00";
     const target = new Date(targetDate);
     const diff = target - now;
 
