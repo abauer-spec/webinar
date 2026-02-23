@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateTimer() {
     const now = new Date();
     // ЗАДАТЬ ВРЕМЯ И ДАТУ
-    const targetDate = "2026-02-23T17:00:00+03:00";
+    const targetDate = "2026-02-24T17:00:00+03:00";
     const target = new Date(targetDate);
     const diff = target - now;
 
@@ -163,7 +163,6 @@ function updateTimer() {
     document.getElementById('hours').innerText = h.toString().padStart(2, '0');
     document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
     document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
-    
 }
 
 setInterval(updateTimer, 1000);
