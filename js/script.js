@@ -163,6 +163,7 @@ function updateTimer() {
     document.getElementById('hours').innerText = h.toString().padStart(2, '0');
     document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
     document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+    
 }
 
 setInterval(updateTimer, 1000);
